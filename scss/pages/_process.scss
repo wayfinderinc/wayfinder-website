@@ -1,0 +1,70 @@
+#process-01 {
+  color: #444444;
+  z-index: 3;
+  position: relative;
+
+  > .container {
+    z-index: 1;
+  }
+
+  &:before {
+    content: " ";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../images/dots_circle-blk.png');
+    background-repeat: no-repeat;
+    background-position:  right -250px top -650px;
+    opacity: .6;
+  }
+
+  &:after {
+    content: " ";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../images/dots_circle-blk.png');
+    background-repeat: no-repeat;
+    background-position:  left -350px bottom -650px;
+    opacity: .6;
+  }
+
+  .title {
+    @include font-size(52);
+    color: inherit;
+    margin-bottom: 0;
+  }
+
+  .text {
+    @include font-size(18);
+    color: inherit;
+    line-height: 1.6;
+  }
+
+  .sub-title {
+    @include font-size(24);
+    color: #1E1F4B;
+    font-weight: 700;
+  }
+
+  hr {
+    height: 6px;
+    border-radius: 3px;
+    background: #1E1F4B;
+    border: none;
+  }
+
+  .item-text {
+    @include font-size(14);
+    color: inherit;
+    line-height: 1.6;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

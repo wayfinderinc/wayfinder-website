@@ -1,0 +1,172 @@
+#about-1 {
+  background: $blue-sky;
+
+  > .container {
+    z-index: 3;
+  }
+
+  &:before {
+    content: " ";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../images/dots-circle-white.png');
+    background-repeat: no-repeat;
+    background-position:  calc(100% - 220px) -380px;
+  }
+
+  &:after {
+    content: " ";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../images/dots-rectangle-white.png');
+    background-repeat: no-repeat;
+    background-position: 12% bottom;
+  }
+
+  .title {
+    @include font-size(60);
+    margin-bottom: 20px;
+  }
+
+  .text {
+    @include font-size(21);
+    line-height: 2;
+  }
+
+  .name {
+    @include font-size(18);
+    font-weight: 400;
+  }
+
+  .job-position {
+    @include font-size(14);
+  }
+
+  .list-staff {
+    > li {
+      margin-bottom: 30px;
+    }
+
+    .thumb {
+      width: 150px;
+      height: 150px;
+      border-radius: 75px;
+      border: 5px solid $white;
+      overflow: hidden;
+      background: transparentize($white, .5);
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+
+#about-2 {
+  z-index: 3;
+  position: relative;
+
+  + .big-bg {
+    background-image: url('../images/about_BG_section5_1.jpg');
+  }
+
+  > .container {
+    z-index: 1;
+  }
+
+  &:before {
+    content: " ";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../images/dots-circle-white.png');
+    background-repeat: no-repeat;
+    background-position:  calc(100% - 220px) -380px;
+  }
+
+  &:after {
+    content: " ";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../images/dots-circle-white.png');
+    background-repeat: no-repeat;
+    background-position: 200px calc(100% + 600px);
+  }
+
+  .circle {
+    $circle-size: 80px;
+    width: $circle-size;
+    height: $circle-size;
+    border-radius: $circle-size / 2;
+    background: $yellow;
+    line-height: $circle-size;
+    @include font-size(32);
+    color: #2D2D6F;
+  }
+
+  .display-4 {
+    @include font-size(60);
+    font-weight: 700;
+  }
+
+  .avatar {
+    $circle-size: 50px;
+    width: $circle-size;
+    height: $circle-size;
+    border-radius: $circle-size / 2;
+    background: transparentize($white, .5);
+    border: 3px solid $white;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .person {
+    @include font-size(21);
+    line-height: 2;
+  }
+}
+
+#about-3 {
+  z-index: 3;
+  position: relative;
+
+  + .big-bg {
+    background-color: #424242;
+  }
+
+  > .container {
+    z-index: 1;
+  }
+
+  .display-4 {
+    @include font-size(62);
+    font-weight: 700;
+  }
+
+  .text {
+    @include font-size(21);
+    line-height: 2;
+    max-width: 860px;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 500px;
+    padding-left: 200px
+  }
+}

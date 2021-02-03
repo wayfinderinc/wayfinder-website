@@ -1,0 +1,17 @@
+footer {
+  opacity: .5;
+  padding: 4px 65px;
+  z-index: 1;
+  position: relative;
+  color: #444444;
+
+  .btn-link {
+    color: inherit;
+  }
+
+
+  .credits {
+    @include font-size(10);
+    font-weight: 400;
+  }
+}

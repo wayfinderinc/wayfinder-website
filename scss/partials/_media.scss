@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+  .grid-svg-wrap {
+    #vert_group_02,
+    #vert_group_04 {
+      display: none;
+    }
+  }
+
+  #process-01 {
+    .title {
+      @include font-size(36);
+    }
+
+    .text {
+      @include font-size(14);
+    }
+
+    .sub-title {
+      @include font-size(21);
+    }
+
+    .item-text {
+      @include font-size(18);
+    }
+  }
+}
