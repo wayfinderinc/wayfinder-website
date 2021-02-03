@@ -1,0 +1,183 @@
+{#
+ # Homepage template
+ #}
+
+{% extends craft.request.isAjax ? "_ajax-main" : "_layout" %}
+{% set title = "Home" %}
+{% set featured, nonfeatured, totalfeatured = craft.entries.section('articles','portfolio').order('postDate desc').isFeatured('1'), craft.entries.section('articles','portfolio').order('postDate desc').isFeatured('not 1').limit(20), craft.entries.section('articles','portfolio').order('postDate desc').isFeatured('1').total() %}
+
+{% block content %}
+	<article id="content" class="home">
+		<section class="intro">
+			{% if featured | length %}
+				{% if totalfeatured >= 2 %}
+					<div class="carousel">
+				{% else %}
+					<div class="no-carousel">
+				{% endif %}
+				{% for entry in featured %}
+					{% set fullStyle = '' %}
+					{% switch entry.type %}
+						{% case "project" %}
+							{% set fullStyle = 'full-project' %}
+						{% case "case" %}
+							{% set fullStyle = 'full-case-study' %}
+						{% default %}
+							{% set fullStyle = 'full-article' %}
+					{% endswitch %}
+					{% if entry.type == 'gallery' %}
+						{% if entry.galleryPreviewPhoto | length %}
+							<div class="hero-full {{ fullStyle }} full-photo" data-image-l="{{ entry.galleryPreviewPhoto.first().getUrl('headerDesktopLow') }}" data-image-h="{{ entry.galleryPreviewPhoto.first().getUrl('headerDesktopHigh') }}" style="background: url(/img/1x1.gif) center center / cover no-repeat;">
+			            {% else %}
+			            	{% set assets = entry.gallery %}
+			                {% if assets | length %}
+								<div class="hero-full {{ fullStyle }} full-photo" data-image-l="{{ entry.assets.first().getUrl('headerDesktopLow') }}" data-image-h="{{ entry.assets.first().getUrl('headerDesktopHigh') }}" style="background: url(/img/1x1.gif) center center / cover no-repeat;">
+							{% else %}
+								<div class="hero-full {{ fullStyle }}">
+			                {% endif %}
+			            {% endif %}
+			            	<div class="hero-content">
+			            		<div class="hero-text">
+									<h1><a href="/home/{{ entry.section.handle }}/detail/{{ entry.slug }}" class="link-gallery">{{ entry.title }}<br><span class="label-badge">Gallery</span></a></h1>
+			            		</div>
+							</div>
+		            {% elseif entry.type == 'video' %}
+		                {% if entry.videoPreviewPhoto | length %}
+							<div class="hero-full {{ fullStyle }} full-photo" data-image-l="{{ entry.videoPreviewPhoto.first().getUrl('headerDesktopLow') }}" data-image-h="{{ entry.videoPreviewPhoto.first().getUrl('headerDesktopHigh') }}" style="background: url(/img/1x1.gif) center center / cover no-repeat;">
+						{% else %}
+							<div class="hero-full {{ fullStyle }}">
+		                {% endif %}
+							<div class="hero-content">
+								<div class="hero-text">
+									<h1><a href="/home/{{ entry.section.handle }}/detail/{{ entry.slug }}" class="link-video">{{ entry.title }}<br><span class="label-badge">Video</span></a></h1>
+								</div>
+							</div>
+		            {% else %}
+						{% if entry.portfolioPhoto | length %}
+							<div class="hero-full {{ fullStyle }} full-photo" data-image-l="{{ entry.portfolioPhoto.first().getUrl('headerDesktopLow') }}" data-image-h="{{ entry.portfolioPhoto.first().getUrl('headerDesktopHigh') }}" style="background: url(/img/1x1.gif) center center / cover no-repeat;">
+						{% elseif entry.articlePhoto | length %}
+							<div class="hero-full {{ fullStyle }} full-photo" data-image-l="{{ entry.articlePhoto.first().getUrl('headerDesktopLow') }}" data-image-h="{{ entry.articlePhoto.first().getUrl('headerDesktopHigh') }}" style="background: url(/img/1x1.gif) center center / cover no-repeat;">
+						{% else %}
+							<div class="hero-full {{ fullStyle }}">
+						{% endif %}
+						<div class="hero-content">
+							<div class="hero-text">
+								<h1>
+									<a href="/home/{{ entry.section.handle }}/detail/{{ entry.slug }}" class="link-entry">{{ entry.title }}<br>
+									{% if (entry.type != 'gallery') and (entry.type != 'video') %}
+										{% if entry.type == 'review' %}
+											<span class="label-badge">Review</span>
+										{% elseif entry.type == 'tutorial' %}
+											<span class="label-badge">Tutorial</span>
+										{% elseif entry.type == 'project' %}
+											<span class="label-badge">Project</span>
+										{% elseif entry.type == 'case' %}
+											<span class="label-badge">Case Study</span>
+										{% else %}
+											{% set entryID = entry.id %}
+											{% set categories = craft.categories.relatedTo({ sourceElement: entryID }).groupId(1).find() %}
+											{% for category in categories %}
+												<span class="label-badge">{{ category.title }}</span>
+											{% endfor %}
+										{% endif %}
+									{% endif %}
+									</a>
+								</h1>
+							</div>
+						</div>
+					{% endif %}
+					</div>
+				{% endfor %}
+				</div>
+			{% endif %}
+
+			<h1 class="mission">We Champion the User, One Pixel at a Time.</h1>
+		</section>
+		{% paginate nonfeatured as nonfeaturedPaged %}
+			<section id="iso-content">
+				<div class="grid-sizer"></div>
+				<div class="gutter-sizer"></div>
+				{% for entry in nonfeaturedPaged %}
+					{% set tileSize = entry.articleBlockSize %}
+					{% set tileImageLow = 'tileLow' ~ tileSize %}
+					{% set tileImageHigh = 'tileHigh' ~ tileSize %}
+					{% set tileStyle = '' %}
+					{% switch entry.type %}
+						{% case "project" %}
+							{% set tileStyle = 'tile-project' %}
+						{% case "case" %}
+							{% set tileStyle = 'tile-case-study' %}
+						{% default %}
+							{% set tileStyle = 'tile-article' %}
+					{% endswitch %}
+					{% if entry.type == 'gallery' %}
+						{% if entry.galleryPreviewPhoto | length %}
+							<div class="entry tile-{{ tileSize }} {{ tileStyle }} tile-photo" data-image-l="{{ entry.galleryPreviewPhoto.first().getUrl(tileImageLow) }}" data-image-h="{{ entry.galleryPreviewPhoto.first().getUrl(tileImageHigh) }}" style="background: url({{ entry.galleryPreviewPhoto.first().getUrl(tileImageLow) }}) center center / cover no-repeat;">
+			            {% else %}
+			            	{% set assets = entry.gallery %}
+			                {% if assets | length %}
+								<div class="entry tile-{{ tileSize }} {{ tileStyle }} tile-photo" data-image-l="{{ entry.assets.first().getUrl(tileImageLow) }}" data-image-h="{{ entry.assets.first().getUrl(tileImageHigh) }}" style="background: url({{ entry.assets.first().getUrl(tileImageLow) }}) center center / cover no-repeat;">
+							{% else %}
+								<div class="entry tile-{{ tileSize }} {{ tileStyle }}">
+			                {% endif %}
+			            {% endif %}
+			            	<a href="/home/{{ entry.section.handle }}/detail/{{ entry.slug }}" class="link-gallery">
+			            		<div class="entry-content">
+			            			<div class="entry-text">
+										<h2>{{ entry.title }}<br><span class="label-badge">Gallery</span></h2>
+									</div>
+								</div>
+							</a>
+		            {% elseif entry.type == 'video' %}
+		                {% if entry.videoPreviewPhoto | length %}
+							<div class="entry tile-{{ tileSize }} {{ tileStyle }} tile-photo" data-image-l="{{ entry.videoPreviewPhoto.first().getUrl(tileImageLow) }}" data-image-h="{{ entry.videoPreviewPhoto.first().getUrl(tileImageHigh) }}" style="background: url({{ entry.videoPreviewPhoto.first().getUrl(tileImageLow) }}) center center / cover no-repeat;">
+						{% else %}
+							<div class="entry tile-{{ tileSize }} {{ tileStyle }}">
+		                {% endif %}
+							<a href="/home/{{ entry.section.handle }}/detail/{{ entry.slug }}" class="link-video">
+								<div class="entry-content">
+									<div class="entry-text">
+										<h2>{{ entry.title }}<br><span class="label-badge">Video</span></h2>
+									</div>
+								</div>
+							</a>
+		            {% else %}
+						{% if entry.portfolioPhoto | length %}
+							<div class="entry tile-{{ tileSize }} {{ tileStyle }} tile-photo" data-image-l="{{ entry.portfolioPhoto.first().getUrl(tileImageLow) }}" data-image-h="{{ entry.portfolioPhoto.first().getUrl(tileImageHigh) }}" style="background: url({{ entry.portfolioPhoto.first().getUrl(tileImageLow) }}) center center / cover no-repeat;">
+						{% elseif entry.articlePhoto | length %}
+							<div class="entry tile-{{ tileSize }} {{ tileStyle }} tile-photo" data-image-l="{{ entry.articlePhoto.first().getUrl(tileImageLow) }}" data-image-h="{{ entry.articlePhoto.first().getUrl(tileImageHigh) }}" style="background: url({{ entry.articlePhoto.first().getUrl(tileImageLow) }}) center center / cover no-repeat;">
+						{% else %}
+							<div class="entry tile-{{ tileSize }} {{ tileStyle }}">
+						{% endif %}
+							<a href="/home/{{ entry.section.handle }}/detail/{{ entry.slug }}" class="link-entry">
+								<div class="entry-content">
+									<div class="entry-text">
+										<h2>{{ entry.title }}<br>
+										{% if (entry.type != 'gallery') and (entry.type != 'video') %}
+											{% if entry.type == 'review' %}
+												<span class="label-badge">Review</span>
+											{% elseif entry.type == 'tutorial' %}
+												<span class="label-badge">Tutorial</span>
+											{% elseif entry.type == 'project' %}
+												<span class="label-badge">Project</span>
+											{% elseif entry.type == 'case' %}
+												<span class="label-badge">Case Study</span>
+											{% else %}
+												{% set entryID = entry.id %}
+												{% set categories = craft.categories.relatedTo({ sourceElement: entryID }).groupId(1).find() %}
+												{% for category in categories %}
+													<span class="label-badge">{{ category.title }}</span>
+												{% endfor %}
+											{% endif %}
+										{% endif %}</h2>
+									</div>
+								</div>
+							</a>
+					{% endif %}
+					</div>
+				{% endfor %}
+			</section>
+			{% if paginate.nextUrl %}<a href="{{ paginate.nextUrl }}">Next Page</a>{% endif %}
+		{% endpaginate %}
+	</article>
+{% endblock %}

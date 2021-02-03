@@ -1,0 +1,68 @@
+{#
+ # Contact template
+#}
+
+{% extends craft.request.isAjax ? "_ajax-main" : "_layout" %}
+{% set title = "Contact" %}
+
+{% block content %}
+    <article id="content" class="article">
+		<div id="map-canvas" class="hero-full"></div>
+
+        <div id="content-channel" class="contact clearfix">
+        	<div class="left">
+	            <h1>Say Hello</h1>
+	            <ul class="contact-info">
+	                <li class="address">{{ entry.addressLine1 }}<br>{{ entry.addressLine2 }}</li>
+	                <li class="phone">{{ entry.phone }}</li>
+	            </ul>
+	            {{ entry.body }}
+	        </div>
+	        <div class="right">
+	            <div id="contact-thanks"><h2>Thanks for contacting Wayfinder.  We'll get back to you directly.</h2></div>
+	            <div id="contact-error"><h2>There were a few errors, yo. Check it:</h2></div>
+	            <div id="contact-form">
+                    {% macro errorList(errors) %}
+                        {% if errors %}
+                            {% for error in errors %}
+                                {{ error }}
+                            {% endfor %}
+                        {% endif %}
+                    {% endmacro %}
+
+                    {% macro errorClass(errors) %}
+                        {% if errors %}
+                             class="error"
+                        {% endif %}
+                    {% endmacro %}
+
+                    {% from _self import errorList, errorClass %}
+
+                    <form id="main-contact-form" method="post" action="" accept-charset="UTF-8" enctype="multipart/form-data">
+                        {{ getCsrfInput() }}
+                        <input type="hidden" name="action" value="contactForm/sendMessage">
+                        <input id="bearslovepicnics" name="bearslovepicnics" type="text">
+
+                        <ul>
+                            <li {{ message is defined and message ? errorClass(message.getErrors('fromName')) }}><label for="fromName">Your Name</label>
+                                <input id="fromName" type="text" name="fromName" value="{% if message is defined %}{{ message.fromName }}{% endif %}">
+                                <div class="errors"><span>{{ message is defined and message ? errorList(message.getErrors('fromName')) }}</span></div></li>
+                            <li {{ message is defined and message ? errorClass(message.getErrors('fromEmail')) }}><label for="fromEmail">Your Email</label>
+                                <input id="fromEmail" type="text" name="fromEmail" value="{% if message is defined %}{{ message.fromEmail }}{% endif %}">
+                                <div class="errors"><span>{{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}</span></div></li>
+                            <li {{ message is defined and message ? errorClass(message.getErrors('subject')) }}><label for="subject">Subject</label>
+                                <input id="subject" type="text" name="subject" value="{% if message is defined %}{{ message.subject }}{% endif %}">
+                                <div class="errors"><span>{{ message is defined and message ? errorList(message.getErrors('subject')) }}</span></div></li>
+                            <li {{ message is defined and message ? errorClass(message.getErrors('message')) }}><label for="message">Talk to Us</label>
+                                <textarea rows="5" cols="40" id="message" name="message">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
+                                <div class="errors"><span>{{ message is defined and message ? errorList(message.getErrors('message')) }}</span></div></li>
+                            <li {{ message is defined and message ? errorClass(message.getErrors('attachment')) }}><span class="chooser">Upload a File</span><input id="attachment" type="file" name="attachment" value="{% if message is defined %}{{ message.attachment }}{% endif %}">
+                                <div class="errors"><span>{{ message is defined and message ? errorList(message.getErrors('attachment')) }}</span></div></li>
+                            <li class="submit"><button type="submit">Send Message</button></li>
+                        </ul>
+                    </form>
+                </div>
+	        </div>
+        </div>
+    </article>
+{% endblock %}

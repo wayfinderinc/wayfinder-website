@@ -1,0 +1,39 @@
+			{% if sectionName == 'articles' %}
+				{% set allCategories = craft.categories.group('articles').find() %}
+				{% if allCategories | length %}
+					<header id="category-select" class="select">
+						<a href="#" class="select-trigger">All Categories</a>
+						<ul>
+							<li class="select-header">Choose a Category<a href="#" class="select-close"></a></li>
+							<li><a href="/articles">All</a></li>
+							{% for category in allCategories %}
+								{% if searchText == category.slug %}
+									{% set selectedClass = 'class=selected' %}
+								{% else %}
+									{% set selectedClass = '' %}
+								{% endif %}
+								<li><a href="/articles/category/{{ category.slug }}" {{ selectedClass }} title="{{ category.title }}">{{ category.title }}</a></li>
+							{% endfor %}
+						</ul>
+					</header>
+				{% endif %}
+			{% else %}
+				{% set allTypes = craft.sections.getSectionByHandle('portfolio').getEntryTypes() %}
+				{% if allTypes | length %}
+					<header id="category-select" class="select">
+						<a href="#" class="select-trigger">All Categories</a>
+						<ul>
+							<li class="select-header">Choose a Category<a href="#" class="select-close"></a></li>
+							<li><a href="/portfolio">All</a></li>
+							{% for type in allTypes %}
+								{% if searchText == type.handle %}
+									{% set selectedClass = 'class=selected' %}
+								{% else %}
+									{% set selectedClass = '' %}
+								{% endif %}
+								<li><a href="/portfolio/category/{{ type.handle }}" {{ selectedClass }} title="{{ type.name }}">{{ type.name }}</a></li>
+							{% endfor %}
+						</ul>
+					</header>
+				{% endif %}
+			{% endif %}

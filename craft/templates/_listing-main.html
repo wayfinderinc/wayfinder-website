@@ -1,0 +1,48 @@
+{#
+ # Article/Portfolio listing index template
+ #}
+
+{% extends craft.request.isAjax ? "_ajax-main" : "_layout" %}
+{% set sectionName = craft.request.getSegment(1) %}
+{% set searchType = craft.request.getSegment(2) %}
+{% set searchText = craft.request.getSegment(3) %}
+
+{% block content %}
+	{% if sectionName == 'portfolio' %}
+		{% if searchType == 'category' %}
+			{% set entries = craft.entries.section('portfolio').type(searchText).order('postDate desc').limit(20) %}
+		{% elseif searchType == 'tag' %}
+			{% set entries = craft.entries.section('portfolio').search(searchText).order('postDate desc').limit(20) %}
+		{% else %}
+			{% set entries = craft.entries.section('portfolio').order('postDate desc').limit(20) %}
+		{% endif %}
+	{% else %}
+		{% if searchType == 'category' %}
+			{% set entries = craft.entries.section('articles').search(searchText).order('postDate desc').limit(20) %}
+		{% elseif searchType == 'tag' %}
+			{% set entries = craft.entries.section('articles').search(searchText).order('postDate desc').limit(20) %}
+		{% else %}
+			{% set entries = craft.entries.section('articles').order('postDate desc').limit(20) %}
+		{% endif %}
+	{% endif %}
+
+	<article id="content" class="article-list">
+		{% if sectionName == 'portfolio' or sectionName == 'articles' %}
+			{% include '_listing-pulldown.html' %}
+		{% endif %}
+
+		{% if sectionName == 'portfolio' %}
+			{% if searchType == 'category' or searchType == 'tag' %}
+				{% include 'portfolio/_listing-category-tag.html' %}
+			{% else %}
+				{% include 'portfolio/_listing.html' %}
+			{% endif %}
+		{% else %}
+			{% if searchType == 'category' or searchType == 'tag' %}
+				{% include 'articles/_listing-category-tag.html' %}
+			{% else %}
+				{% include 'articles/_listing.html' %}
+			{% endif %}
+		{% endif %}
+	</article>
+{% endblock %}

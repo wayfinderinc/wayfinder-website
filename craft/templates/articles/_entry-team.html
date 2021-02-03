@@ -1,0 +1,24 @@
+{#
+ # Team Member Article entry template
+ #}
+
+{% extends craft.request.isAjax ? "_ajax" : "_team" %}
+{% set entrySlug = craft.request.lastSegment %}
+{% set entry = craft.entries.slug(entrySlug).first() %}
+{% set entryID = entry.id %}
+{% set authorName = craft.request.getSegment(3) %}
+{% set user = craft.users.username(authorName).first() %}
+{% set userID = user.id %}
+{% set categories = craft.categories.relatedTo({ sourceElement: entryID }).groupId(1).find() %}
+{% set params = {section: 'articles', order: 'postDate desc', authorId: userID} %}
+{% set firstEntry = craft.entries(params).first() %}
+{% set lastEntry = craft.entries(params).last() %}
+{% set prevEntry = entry.getPrev(params) %}
+{% set nextEntry = entry.getNext(params) %}
+{% set title = entry.title %}
+
+{% block entrycontent %}
+    <div id="ajax">
+        {% include "articles/_types/" ~ entry.type ~ ".html" %}
+    </div>
+{% endblock %}

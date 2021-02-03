@@ -1,0 +1,8 @@
+<article id="entry-content" class="article">
+    <div id="content-channel">
+        <span id="modal-title-span">{{ entry.title }}</span>
+        <section id="video">
+            <div>{{ craft.embedder.embed (entry.video, {max_width:1024, max_height:768, wmode:'transparent'}) }}</div>
+        </section>
+    </div>
+</article>

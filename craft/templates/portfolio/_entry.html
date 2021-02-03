@@ -1,0 +1,20 @@
+{#
+ # Portfolio entry template
+ #}
+
+{% extends craft.request.isAjax ? "_ajax" : "_listing-main" %}
+{% set entrySlug = craft.request.lastSegment %}
+{% set entry = craft.entries.slug(entrySlug).first() %}
+{% set entryID = entry.id %}
+{% set params = {section: 'portfolio', order: 'postDate desc'} %}
+{% set firstEntry = craft.entries(params).first() %}
+{% set lastEntry = craft.entries(params).last() %}
+{% set prevEntry = entry.getPrev(params) %}
+{% set nextEntry = entry.getNext(params) %}
+{% set title = entry.title %}
+
+{% block entrycontent %}
+    <div id="ajax">
+        {% include "portfolio/_types/" ~ entry.type ~ ".html" %}
+    </div>
+{% endblock %}

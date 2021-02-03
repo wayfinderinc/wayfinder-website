@@ -1,0 +1,21 @@
+<div id="main-header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title"><a href="{{ siteUrl }}" title="{{ siteName }}"><span class="logo-text"></span></a><span class="title-section">Home</span></h1>
+                <nav>
+                    <a href="#" class="menu" title="Navigation"></a>
+                </nav>
+            </header>
+        </div>
+
+        <div id="main-navigation-container">
+            <nav>
+                <ul>
+                    <li><a href="{{ siteUrl }}" {% if craft.request.firstSegment == '' %}class="active"{% endif %}>Home</a></li>
+                    <li><a href="{{ url('articles') }}" {% if craft.request.firstSegment == 'articles' %}class="active"{% endif %}>Articles</a></li>
+                    <li><a href="{{ url('portfolio') }}" {% if craft.request.firstSegment == 'portfolio' %}class="active"{% endif %}>Portfolio</a></li>
+                    <li><a href="{{ url('about') }}" {% if craft.request.firstSegment == 'about' %}class="active"{% endif %}>About</a></li>
+                    <li><a href="{{ url('contact') }}" {% if craft.request.firstSegment == 'contact' %}class="active"{% endif %}>Contact</a></li>
+                    <li class="social"><a href="#" class="icon twitter" title="Wayfinder tweets"></a><a href="#" class="icon linkedin-light" title="Wayfinder networks"></a><a href="#" class="icon dribbble" title="Wayfinder dribbbles?"></a></li>
+                </ul>
+            </nav>
+        </div>

@@ -1,0 +1,164 @@
+{#
+ # About Us template
+ #}
+
+{% extends craft.request.isAjax ? "_ajax-main" : "_layout" %}
+{% set title = "About Us" %}
+{% set aboutentry = craft.entries.section('about').first() %}
+
+{% block content %}
+    <article id="content" class="about">
+    	<section class="intro">
+		{% if aboutentry.aboutIntroPhoto | length %}
+            <div class="hero-full" data-image-l="{{ aboutentry.aboutIntroPhoto.first().getUrl('headerDesktopLow') }}" data-image-h="{{ aboutentry.aboutIntroPhoto.first().getUrl('headerDesktopHigh') }}" style="background: url('{{ aboutentry.aboutIntroPhoto.first().getUrl('headerDesktopLow') }}') center center / cover no-repeat"></div>
+        {% endif %}
+        	<div class="intro-content">
+				<h1>{{ aboutentry.heading }}</h1>
+			{% if aboutentry.introSubheading | length %}
+				<h2>{{ aboutentry.introSubheading }}</h2>
+			{% endif %}
+				{{ aboutentry.intro }}
+			</div>
+		</section>
+		<section class="capabilities">
+			<div class="capabilities-content">
+				<h1>{{ aboutentry.capabilitiesHeading }}</h1>
+			{% if aboutentry.capabilitiesSubheading | length %}
+				<h2>{{ aboutentry.capabilitiesSubheading }}</h2>
+			{% endif %}
+				{{ aboutentry.capabilitiesIntro }}
+				<div class="capabilities-chooser">
+					<div class="capabilities-options">
+						<div class="xd-image"></div>
+						<div class="id-image"></div>
+					</div>
+					<div class="ampersand">
+						<a class="xd-chooser">Experience Design</a>
+						<a class="id-chooser">Industrial Design</a>
+					</div>
+				</div>
+				<div class="capabilities-list">
+					<div class="vertical-rule-top"></div>
+					<div class="vertical-rule-left"></div>
+					<div class="vertical-rule-right"></div>
+					{{ aboutentry.capabilitiesList }}
+				</div>
+			</div>
+		</section>
+		<section class="our-process">
+			<section id="process-process" class="process">
+				<div class="process-content clearfix">
+					<div class="left">
+						<h1>{{ aboutentry.processHeading }}</h1>
+					{% if aboutentry.processSubheading | length %}
+						<h2>{{ aboutentry.processSubheading }}</h2>
+					{% endif %}
+						{{ aboutentry.processIntro }}
+					</div>
+					<div class="right">
+						{{ aboutentry.processFigure }}
+					</div>
+				</div>
+				<footer>
+					<a href="#">Discovery &amp; Define</a>
+				</footer>
+			</section>
+			<section id="process-discover" class="discover">
+			{% if aboutentry.discoverPhoto | length %}
+	            <div class="hero-full" data-image-l="{{ aboutentry.discoverPhoto.first().getUrl('headerDesktopLow') }}" data-image-h="{{ aboutentry.discoverPhoto.first().getUrl('headerDesktopHigh') }}" style="background: url('{{ aboutentry.discoverPhoto.first().getUrl('headerDesktopLow') }}') center center / cover no-repeat"></div>
+	        {% endif %}
+				<div class="process-content clearfix">
+					<div class="left">
+						<h1>{{ aboutentry.discoverHeading }}</h1>
+					{% if aboutentry.discoverSubheading | length %}
+						<h2>{{ aboutentry.discoverSubheading }}</h2>
+					{% endif %}
+						{{ aboutentry.discoverIntro }}
+					</div>
+					<div class="right">
+						<h3>This phase may include:</h3>
+						{{ aboutentry.discoverList }}
+					</div>
+				</div>
+				<footer>
+					<a href="#">Design &amp; Development</a>
+				</footer>
+			</section>
+			<section id="process-design" class="design">
+			{% if aboutentry.designPhoto | length %}
+	            <div class="hero-full"><div class="hero-pic"><img src="{{ aboutentry.designPhoto.first().getUrl('headerDesktopLow') }}" data-image-l="{{ aboutentry.designPhoto.first().getUrl('headerDesktopLow') }}" data-image-h="{{ aboutentry.designPhoto.first().getUrl('headerDesktopHigh') }}"></div></div>
+	        {% endif %}
+				<div class="process-content clearfix">
+					<div class="left">
+						<h1>{{ aboutentry.designHeading }}</h1>
+					{% if aboutentry.designSubheading | length %}
+						<h2>{{ aboutentry.designSubheading }}</h2>
+					{% endif %}
+						{{ aboutentry.designIntro }}
+					</div>
+					<div class="right">
+						<h3>This phase may include:</h3>
+						{{ aboutentry.designList }}
+					</div>
+				</div>
+				<footer>
+					<a href="#">Manage &amp; Measure</a>
+				</footer>
+			</section>
+			<section id="process-measure" class="measure">
+			{% if aboutentry.measurePhoto | length %}
+	            <div class="hero-full" data-image-l="{{ aboutentry.measurePhoto.first().getUrl('headerDesktopLow') }}" data-image-h="{{ aboutentry.measurePhoto.first().getUrl('headerDesktopHigh') }}" style="background: url('{{ aboutentry.measurePhoto.first().getUrl('headerDesktopLow') }}') center center / cover no-repeat"></div>
+	        {% endif %}
+				<div class="process-content clearfix">
+					<div class="left">
+						<h1>{{ aboutentry.measureHeading }}</h1>
+					{% if aboutentry.measureSubheading | length %}
+						<h2>{{ aboutentry.measureSubheading }}</h2>
+					{% endif %}
+						{{ aboutentry.measureIntro }}
+					</div>
+					<div class="right">
+						<h3>This phase may include:</h3>
+						{{ aboutentry.measureList }}
+					</div>
+				</div>
+			</section>
+		</section>
+		<section class="clients">
+			<div class="client-content">
+				<h1>{{ aboutentry.clientsHeading }}</h1>
+			{% if aboutentry.clientsSubheading | length %}
+				<h2>{{ aboutentry.clientsSubheading }}</h2>
+			{% endif %}
+				{{ aboutentry.clientsIntro }}
+			{% if aboutentry.clientsList | length %}
+				<ul class="clearfix">
+				{% for block in aboutentry.clientsList %}
+					{% set image = block.clientLogo.first() %}
+					<li data-image-l="{{ image.getURL('clientLow') }}" data-image-h="{{ image.getUrl('clientHigh') }}" style="background: url('{{ image.getURL('clientLow') }}') center center no-repeat" title="{{ block.clientName }}"></li>
+				{% endfor %}
+				</ul>
+			{% endif %}
+			</div>
+		</section>
+		<section class="team">
+			<div class="team-content">
+				<h1>{{ aboutentry.teamHeading }}</h1>
+			{% if aboutentry.teamSubheading | length %}
+				<h2>{{ aboutentry.teamSubheading }}</h2>
+			{% endif %}
+				{{ aboutentry.teamIntro }}
+				{% set userlist = craft.users %}
+				{% if userlist | length %}
+					<ul class="clearfix">
+						{% for user in userlist %}
+							<li><a href="/about/team/{{ user.username }}" class="link-team"><img src="{{ user.getPhotoUrl(200) }}" /><br />{{ user.fullName }}</a></li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</div>
+		</section>
+    </article>
+
+    <ul class="process-dots"></ul>
+{% endblock %}

@@ -1,0 +1,28 @@
+index
+
+if segment 1 = about
+	include about template
+elseif segment 1 = contact
+	include contact template
+elseif segment 1 = articles or portfolio OR segment 1 = team and segment 2 is not null
+	include listing
+endif
+
+
+listing
+
+if segment 2 = category
+	if segment 1 = portfolio
+		build type list
+		load posts by type
+	else
+		build category list
+		load posts by category
+	endif
+else if segment 2 = tag
+	load posts by tag
+endif
+
+if segment 1 = team and segment 3 is not null
+	load posts by user
+endif

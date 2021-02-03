@@ -1,0 +1,59 @@
+.comparable {
+	width: 100%;
+	height: auto;
+	padding: 0;
+	position: relative;
+}
+
+.comparable:before {
+    content: 'Before';
+    float: left;
+    position: absolute;
+    top: -36px;
+    left: 0px;
+}
+
+.comparable:after {
+	content: 'After';
+	float: right;
+	position: absolute;
+	top: -36px;
+	right: 0px;
+}
+
+.comparable div:nth-child(2) {
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+
+}
+
+.comparable div:first-child {
+	position: relative;
+	z-index: 2;
+	border-right: 1px solid #ff4a4e;
+	margin-right: -5px;
+	overflow: hidden;
+}
+
+.comparable .instruction {
+	position: absolute;
+	left: calc(50% - 10px);
+	left: 50%;
+	top: calc(50% - 10px);
+	z-index:1000;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background: #ff4a4e;
+	text-align: center;
+}
+
+.comparable .instruction p {
+	background: white;	
+	display: inline;
+	padding: 1%;
+	font-size: 1em;
+	text-transform: uppercase;
+}

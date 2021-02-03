@@ -1,0 +1,13 @@
+<article id="entry-content" class="article">
+    <div id="content-channel">
+        <span id="modal-title-span">{{ entry.title }}</span>
+        {% set assets = entry.gallery %}
+        {% if assets | length %}
+            <section id="gallery" class="carousel">
+                {% for block in assets %}
+                    <div><img data-image-l="{{ block.image.first().getUrl('headerDesktopLow') }}" data-image-h="{{ block.image.first().getUrl('headerDesktopHigh') }}" src="{{ block.image.first().getUrl('headerDesktopLow') }}"></div>
+                {% endfor %}
+            </section>
+        {% endif %}
+    </div>
+</article>

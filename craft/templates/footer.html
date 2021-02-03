@@ -1,0 +1,37 @@
+<div id="main-footer-container"{% if title is defined %} class="footer-{{ currentSection }}"{% endif %}>
+            <footer class="wrapper">
+                <ul>
+                    <li class="contact"><a href="/contact">Contact Us</a></li>
+                    <li class="phone">786.268.9504</li>
+                    <li class="address">7300 Biscayne Blvd, Ste 200 Miami, FL 33138</li>
+                </ul>
+            </footer>
+        </div>
+        <div id="secondary-footer-container">
+            <footer class="wrapper">
+                &copy; Wayfinder LLC. All Rights Reserved
+            </footer>
+        </div>
+
+        <script src="/js/vendor/jquery-2.1.1.min.js"></script>
+        <script src="/js/vendor/packery.min.js"></script>
+        <script src="/js/vendor/highlight-8.2.0.min.js"></script>
+        <script src="/js/vendor/slick.min.js"></script>
+        <script src="/js/vendor/imgslider.min.js"></script>
+        <script src="/js/vendor/waypoints.min.js"></script>
+        <script src="/js/vendor/scrollto.min.js"></script>
+        <script src="/js/rating.min.js"></script>
+        <script src="/js/modal.js"></script>
+        <script src="/js/main.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYNeC6E-EBY7GVi6kTAxaIuyvdapwqRiI"></script>
+
+        {% if not craft.request.isLivePreview %}
+            <script>
+                (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                e.src='//www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+                ga('create','UA-10012853-1');ga('send','pageview');
+            </script>
+        {% endif %}

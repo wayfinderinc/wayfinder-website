@@ -1,0 +1,12 @@
+{
+	buttons: ['html','formatting','bold','italic','deleted','underline','unorderedlist','orderedlist','link','image','video','file','table','horizontalrule'],
+	boldTag: 'b',
+	formatting: ['p','h1','h2','h3','h4','h5','h6'],
+	plugins: ['fullscreen'],
+	cleanup: false,
+	convertDivs: false,
+	paragraphy: false,
+	tidyHtml: false,
+	toolbarFixedBox: true,
+	wym: true
+}

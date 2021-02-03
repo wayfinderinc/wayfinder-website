@@ -1,0 +1,75 @@
+{#
+ # Portfolio entries by category template
+ #}
+
+{% extends craft.request.isAjax ? "_ajax-main" : "_layout" %}
+{% set searchTag = craft.request.getSegment(3) %}
+{% set title = searchTag %}
+{% set selectedClass = '' %}
+{% set entries = craft.entries.section('portfolio').type(searchTag).limit(20) %}
+{% set allTypes = craft.sections.getSectionByHandle('portfolio').getEntryTypes() %}
+
+{% block content %}
+    <article id="content" class="article-list">
+        {% if allTypes | length %}
+			<header id="category-select" class="select">
+				<a href="#" class="select-trigger">All Categories</a>
+				<ul>
+					<li class="select-header">Choose a Category<a href="#" class="select-close"></a></li>
+					<li><a href="/portfolio">All</a></li>
+					{% for type in allTypes %}
+						{% if searchTag == type.handle %}
+							{% set selectedClass = 'class=selected' %}
+						{% else %}
+							{% set selectedClass = '' %}
+						{% endif %}
+						<li><a href="/portfolio/category/{{ type.handle }}" {{ selectedClass }} title="{{ type.name }}">{{ type.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</header>
+		{% endif %}
+        {% paginate entries as portfolioPosts %}
+            <section id="iso-content">
+                {% for entry in portfolioPosts %}
+                    {% set tileSize = entry.articleBlockSize %}
+                    {% set tileImageLow = 'tileLow' ~ tileSize %}
+                    {% set tileImageHigh = 'tileHigh' ~ tileSize %}
+                    {% set tileStyle = '' %}
+                    {% switch entry.type %}
+                        {% case "project" %}
+                            {% set tileStyle = 'tile-project' %}
+                        {% case "case" %}
+                            {% set tileStyle = 'tile-case-study' %}
+                        {% default %}
+                            {% set tileStyle = 'tile-project' %}
+                    {% endswitch %}
+                    {% if entry.portfolioPhoto | length %}
+                        <div class="entry tile-{{ tileSize }} {{ tileStyle }} tile-photo" data-image-l="{{ entry.portfolioPhoto.first().getUrl(tileImageLow) }}" data-image-h="{{ entry.portfolioPhoto.first().getUrl(tileImageHigh) }}" style="background: url({{ entry.portfolioPhoto.first().getUrl(tileImageLow) }}) center center / cover no-repeat;">
+                    {% else %}
+                        <div class="entry tile-{{ tileSize }} {{ tileStyle }}">
+                    {% endif %}
+                        <a href="{{ entry.url }}" class="link-entry">
+    					   <div class="entry-content">
+    							<div class="entry-text">
+									<h2>{{ entry.title }}<br>
+									{% if entry.type == 'project' %}
+										<span class="label-badge">Project</span>
+									{% elseif entry.type == 'case' %}
+										<span class="label-badge">Case Study</span>
+									{% else %}
+										{% set entryID = entry.id %}
+										{% set categories = craft.categories.relatedTo({ sourceElement: entryID }).groupId(1).find() %}
+										{% for category in categories %}
+											<span class="label-badge">{{ category.title }}</span>
+										{% endfor %}
+									{% endif %}</h2>
+    							</div>
+    						</div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </section>
+            {% if paginate.nextUrl %}<a href="{{ paginate.nextUrl }}">Next Page</a>{% endif %}
+        {% endpaginate %}
+    </article>
+{% endblock %}

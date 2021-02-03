@@ -1,0 +1,214 @@
+<article id="entry-content" class="article">
+    {% if entry.portfolioPhoto | length %}
+        <div class="hero-full" data-image-l="{{ entry.portfolioPhoto.first().getUrl('headerDesktopLow') }}" data-image-h="{{ entry.portfolioPhoto.first().getUrl('headerDesktopHigh') }}" style="background: url('{{ entry.portfolioPhoto.first().getUrl('headerDesktopLow') }}') center center / cover no-repeat"></div>
+    {% endif %}
+
+    <div id="content-channel">
+        <span id="modal-title-span">{{ entry.title }}</span>
+        <span class="label-badge">Case Study</span>
+
+        <h1>{{ entry.title }}</h1>
+
+        {% if entry.heading | length %}
+            <h2 class="synopsis">{{ entry.heading }}</h2>
+        {% endif %}
+
+        {% if entry.client.option.selected | length %}
+            <h3>{{ entry.client.option.selected }}</h3>
+        {% endif %}
+
+        <h4 class="author-name"><img src="{{ entry.author.photoUrl }}" />By {{ entry.author.fullName }}</h4>
+
+        {% if entry.synopsis | length %}
+            <section>{{ entry.synopsis }}</section>
+        {% endif %}
+
+        {% for block in entry.contentCombined %}
+            <section class="{{ block.type }}">
+            {% switch block.type %}
+                {% case "aside" %}
+                    {% set float = block.float %}
+                    {% if (float == "left") or (float == "right") %}
+                        <aside class="float-{{ block.float }}">
+                    {% else %}
+                        <aside class="{{ block.typePosition }}">
+                    {% endif %}
+                        {{ block.body }}
+                    </aside>
+                {% case "code" %}
+                    <h2>{{ block.heading }}</h2>
+                    <code class="code-{{ block.type }}">{{ block.source }}</code>
+                {% case "comparison" %}
+                    {% set beforeImage, afterImage = block.beforeImage.first(), block.afterImage.first() %}
+                    {% if beforeImage and afterImage %}
+                        <div class="comparable responsive">
+                            <div class="compare"><img data-image-l="{{ beforeImage.getUrl('headerDesktopLow') }}" data-image-h="{{ beforeImage.getUrl('headerDesktopHigh') }}" src="{{ beforeImage.getUrl('headerDesktopLow') }}" /></div>
+                            <div class="compare"><img data-image-l="{{ afterImage.getUrl('headerDesktopLow') }}" data-image-h="{{ afterImage.getUrl('headerDesktopHigh') }}" src="{{ afterImage.getUrl('headerDesktopLow') }}" /></div>
+                        </div>
+                        <span class="caption">{{ block.caption }}</span>
+                    {% endif %}
+                {% case "figure" %}
+                    {% set image, float = block.image.first(), block.float %}
+                    {% if (float == "left") or (float == "right") %}
+                        {% set imgTransformLow, imgTransformHigh = "figureLowHalf", "figureHighHalf" %}
+                        <figure class="float-{{ block.float }}">
+                    {% else %}
+                        {% set imgTransformLow, imgTransformHigh = "imgLowFull", "imgHighFull" %}
+                        <figure class="{{ block.typePosition }}">
+                    {% endif %}
+                        {% if image %}
+                            <img data-image-l="{{ image.getUrl(imgTransformLow) }}" data-image-h="{{ image.getUrl(imgTransformHigh) }}" src="{{ image.getUrl(imgTransformLow) }}" />
+                        {% endif %}
+                        <figcaption>{{ block.caption }}</figcaption>
+                    </figure>
+                {% case "figureGroup2" %}
+                    {% set image1, image2, roundImage = block.image1.first(), block.image2.first(), "" %}
+                    {% if block.roundedImages %}
+                        {% set roundImage = "round" %}
+                    {% endif %}
+                    <figure class="{{ roundImage }}">
+                        {% if image1 %}
+                            <img data-image-l="{{ image1.getUrl('figureLow2Up') }}" data-image-h="{{ image1.getUrl('figureHigh2Up') }}" src="{{ image1.getUrl('figureLow2Up') }}" />
+                        {% endif %}
+                        <h2>{{ block.heading1 }}</h2>
+                        <figcaption>{{ block.caption1 }}</figcaption>
+                    </figure>
+                    <figure class="{{ roundImage }}">
+                        {% if image2 %}
+                            <img data-image-l="{{ image2.getUrl('figureLow2Up') }}" data-image-h="{{ image2.getUrl('figureHigh2Up') }}" src="{{ image2.getUrl('figureLow2Up') }}" />
+                        {% endif %}
+                        <h2>{{ block.heading2 }}</h2>
+                        <figcaption>{{ block.caption2 }}</figcaption>
+                    </figure>
+                {% case "figureGroup4" %}
+                    {% set image1, image2, image3, image4, roundImage = block.image1.first(), block.image2.first(), block.image3.first(), block.image4.first(), "" %}
+                    {% if block.roundedImages %}
+                        {% set roundImage = "round" %}
+                    {% endif %}
+                    <figure class="{{ roundImage }}">
+                        {% if image1 %}
+                            <img data-image-l="{{ image1.getUrl('figureLow4Up') }}" data-image-h="{{ image1.getUrl('figureHigh4Up') }}" src="{{ image1.getUrl('figureLow4Up') }}" />
+                        {% endif %}
+                        <h2>{{ block.heading1 }}</h2>
+                        <figcaption>{{ block.caption1 }}</figcaption>
+                    </figure>
+                    <figure class="{{ roundImage }}">
+                        {% if image2 %}
+                            <img data-image-l="{{ image2.getUrl('figureLow4Up') }}" data-image-h="{{ image2.getUrl('figureHigh4Up') }}" src="{{ image2.getUrl('figureLow4Up') }}" />
+                        {% endif %}
+                        <h2>{{ block.heading2 }}</h2>
+                        <figcaption>{{ block.caption2 }}</figcaption>
+                    </figure>
+                    <figure class="{{ roundImage }}">
+                        {% if image3 %}
+                            <img data-image-l="{{ image3.getUrl('figureLow4Up') }}" data-image-h="{{ image3.getUrl('figureHigh4Up') }}" src="{{ image3.getUrl('figureLow4Up') }}" />
+                        {% endif %}
+                        <h2>{{ block.heading3 }}</h2>
+                        <figcaption>{{ block.caption3 }}</figcaption>
+                    </figure>
+                    <figure class="{{ roundImage }}">
+                        {% if image4 %}
+                            <img data-image-l="{{ image4.getUrl('figureLow4Up') }}" data-image-h="{{ image4.getUrl('figureHigh4Up') }}" src="{{ image4.getUrl('figureLow4Up') }}" />
+                        {% endif %}
+                        <h2>{{ block.heading4 }}</h2>
+                        <figcaption>{{ block.caption4 }}</figcaption>
+                    </figure>
+                {% case "inlineGallery" %}
+                    {% set assets = block.gallery %}
+                        {% if assets | length %}
+                        {% if block.heading | length %}
+                            <h2>{{ block.heading }}</h2>
+                        {% endif %}
+                        <div class="carousel">
+                            {% for asset in assets %}
+                                <div><img data-image-l="{{ asset.getUrl('headerDesktopLow') }}" data-image-h="{{ asset.getUrl('headerDesktopHigh') }}" src="{{ asset.getUrl('headerDesktopLow') }}" /></div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% case "inlineVideo" %}
+                    {% if block.heading | length %}
+                        <h2>{{ block.heading }}</h2>
+                    {% endif %}
+                        {{ craft.embedder.embed (block.video, {max_width:1024, max_height:768, wmode:'transparent'}) }}
+                {% case "quote" %}
+                    {% set float = block.float %}
+                    {% if (float == "left") or (float == "right") %}
+                        <blockquote class="float-{{ block.float }}">
+                    {% else %}
+                        <blockquote class="{{ block.typePosition }}">
+                    {% endif %}
+                        <p>{{ block.quote }}</p>
+                        <cite>{{ block.source }}</cite>
+                    </blockquote>
+                {% case "rating" %}
+                    <h2 class="rating">{{ block.heading }} <em>{{ block.rating }}/5</em></h2>
+                    <p>{{ block.explanation }}</p>
+                {% case "simpleContent" %}
+                    {{ block.body }}
+                {% default %}
+                    <h2>Aw, Noodles.</h2>
+                    <p>Shits be busted, yo!</p>
+            {% endswitch %}
+            </section>
+        {% endfor %}
+
+        {% if entry.conclusion | length %}
+            <section class="conclusion">{{ entry.conclusion }}</section>
+        {% endif %}
+
+        <footer>
+            <div class="tags-time">
+                <p class="footer-date">Published {{ entry.postDate.format('F jS, Y') }}</p>
+                {% if entry.tags | length %}
+                    <p class="footer-tags">
+                        {% for tag in entry.tags %}
+                            <a href="/portfolio/tag/{{ tag.name }}" id="link-tag">{{ tag.name }}</a>
+                        {% endfor %}
+                    </p>
+                {% endif %}
+            </div>
+            <div class="reach-references">
+                <div class="reach-out">
+                    <h3>Reach Out and Say Hello</h3>
+                    <p>{{ entry.author.contactMessage }}</p>
+                    <a href="mailto:{{ entry.author.email }}">Contact {{ entry.author.firstName }}</a>
+                </div>
+
+                {% if entry.references | length %}
+                    <div class="references">
+                        <h3>References</h3>
+                        <ul>
+                        {% for block in entry.references %}
+                            <li><a href="{{ block.sourceUrl }}">{{ block.heading }}<cite>{{ block.source }} &bull; {{ block.date | date('F jS, Y') }}</cite></a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+        </footer>
+    </div>
+</article>
+{% if nextEntry %}
+    {% if nextEntry.portfolioPhoto | length %}
+        <div id="footer-next-article" class="footer-photo" data-image-l="{{ nextEntry.portfolioPhoto.first().getUrl('headerDesktopLow') }}" data-image-h="{{ nextEntry.portfolioPhoto.first().getUrl('headerDesktopHigh') }}" style="background: url({{ nextEntry.portfolioPhoto.first().getUrl('headerDesktopLow') }}) center center / cover no-repeat; padding-top: 200px;">
+    {% else %}
+        <div id="footer-next-article">
+    {% endif %}
+        <div class="wrapper">
+            <h4>Next Article</h4>
+            <h2><a href="{{ nextEntry.slug }}" id="link-entry-next">{{ nextEntry.title }}</a></h2>
+        </div>
+    </div>
+{% endif %}
+
+{% if prevEntry %}
+    <a href="{{ prevEntry.slug }}" id="link-prev" class="arrow-left"><span><em>Previous Article: </em>{{ prevEntry.title }}</span></a>
+{% else %}
+    <a href="{{ lastEntry.slug }}" id="link-prev" class="arrow-left"><span><em>Last Article: </em>{{ lastEntry.title }}</span></a>
+{% endif %}
+
+{% if nextEntry %}
+    <a href="{{ nextEntry.slug }}" id="link-next" class="arrow-right"><span><em>Next Article: </em>{{ nextEntry.title }}</span></a>
+{% else %}
+    <a href="{{ firstEntry.slug }}" id="link-next" class="arrow-right"><span><em>First Article: </em>{{ firstEntry.title }}</span></a>
+{% endif %}

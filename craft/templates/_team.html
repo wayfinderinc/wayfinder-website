@@ -1,0 +1,77 @@
+{#
+ # Team Member profile by slug template
+ #}
+
+{% extends "_about" %}
+{% set authorName = craft.request.getSegment(3) %}
+{% set user = craft.users.username(authorName).first() %}
+{% set params = {status: 'active'} %}
+{% set firstAuthor = craft.users.first() %}
+{% set lastAuthor = craft.users.last() %}
+{% set prevAuthor = user.getPrev(params) %}
+{% set nextAuthor = user.getNext(params) %}
+{% set title = user.fullName %}
+{% set userentries = craft.entries.section('articles').authorId(user.id).order('postDate desc').limit(20) %}
+
+{% block content %}
+	<article id="content" class="article">
+		{% if user.teamPhoto | length %}
+			<div class="hero-full" data-image-l="{{ user.teamPhoto.first().getUrl('headerDesktopLow') }}" data-image-h="{{ user.teamPhoto.first().getUrl('headerDesktopHigh') }}" style="background: url('{{ user.teamPhoto.first().getUrl('headerDesktopLow') }}') center center / cover no-repeat"></div>
+		{% endif %}
+		<div id="content-channel" class="team">
+			<span id="modal-title-span">Our Team</span>
+			<h1 class="author-name-large"><img src="{{ user.getPhotoUrl(200) }}" />{{ user.fullName }}</h1>
+			<h2>{{ user.position }}</h2>
+			<p>{{ user.fullBio }}</p>
+			<section class="say-hello">
+				<h3>Reach Out and Say Hello</h3>
+				<p>{{ user.contactMessage }}</p>
+
+				{% set social = user.social.first() %}
+				{% if social | length %}
+					<div id="team-social">
+						{% if social.twitter | length %}
+							<a href="{{ social.twitter }}" class="icon twitter"></a>
+						{% endif %}
+						{% if social.instagram | length %}
+							<a href="{{ social.instagram }}" class="icon instagram"></a>
+						{% endif %}
+						{% if social.linkedin | length %}
+							<a href="{{ social.linkedin }}" class="icon linkedin"></a>
+						{% endif %}
+						{% if social.dribbble | length %}
+							<a href="{{ social.dribbble }}" class="icon dribbble"></a>
+						{% endif %}
+						{% if social.pinterest | length %}
+							<a href="{{ social.pinterest }}" class="icon pinterest"></a>
+						{% endif %}
+						{% if social.rdio | length %}
+							<a href="{{ social.rdio }}" class="icon rdio"></a>
+						{% endif %}
+						{% if social.youtube | length %}
+							<a href="{{ social.youtube }}" class="icon youtube"></a>
+						{% endif %}
+						{% if social.vimeo | length %}
+							<a href="{{ social.vimeo }}" class="icon vimeo"></a>
+						{% endif %}
+					</div>
+				{% endif %}
+				<a class="contact" href="mailto:{{ user.email }}">Contact {{ user.firstName }}</a>
+			</section>
+		</div>
+		{% if userentries | length %}
+			{% include '_listing-main-team.html' %}
+		{% endif %}
+	</article>
+	{% if prevAuthor %}
+		<a href="/about/team/{{ prevAuthor.username }}" id="link-prev" class="arrow-left"><span><em>Team: </em>{{ prevAuthor.fullName }}</span></a>
+	{% else %}
+		<a href="/about/team/{{ lastAuthor.username }}" id="link-prev" class="arrow-left"><span><em>Team: </em>{{ lastAuthor.fullName }}</span></a>
+	{% endif %}
+
+	{% if nextAuthor %}
+		<a href="/about/team/{{ nextAuthor.username }}" id="link-next" class="arrow-right"><span><em>Team: </em>{{ nextAuthor.fullName }}</span></a>
+	{% else %}
+		<a href="/about/team/{{ firstAuthor.username }}" id="link-next" class="arrow-right"><span><em>Team: </em>{{ firstAuthor.fullName }}</span></a>
+	{% endif %}
+{% endblock %}
