@@ -1,0 +1,18 @@
+$body-color: $gray-02;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 1280px,
+  lg: 1440px,
+  xl: 1900px
+);
+
+$container-max-widths: (
+  sm: 705px,
+  md: 1210px,
+  lg: 1360px,
+  xl: 1880px
+);
+
+$grid-gutter-width:           20px !default;

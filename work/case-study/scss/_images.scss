@@ -1,0 +1,59 @@
+.img-progress { background: url(https://www.indiewire.com/wp-content/uploads/2016/07/samuel-l-jackson-in-pulp-fiction.jpg) no-repeat; background-size: cover; background-position: center top; }
+.setf-screenshot, .setf-sketch, .setf-sketch-nav { position: absolute; }
+.challenge-list-1 { background: url(https://vignette.wikia.nocookie.net/villains/images/2/2f/Glass-samuel-l-jackson1.jpg/revision/latest?cb=20190210202111) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.challenge-list-2 { background: url(https://www.space.ca/wp-content/uploads/2017/11/Unbreakable.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.challenge-list-3 { background: url(https://www.movienewsnet.com/wp-content/uploads/2019/01/Glass-1.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.challenge-list-4 { background: url(https://static1.squarespace.com/static/51b3dc8ee4b051b96ceb10de/t/5a0334a99140b7583645e193/1510159532141/?format=2500w) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-global-themes { background: url(../img/global-themes.jpg) no-repeat !important; background-size: contain !important; background-position: center top !important;
+  @include respond-to(tablet-w) { border: none; background-size: cover !important; }
+}
+.img-solution { background: url(https://static1.squarespace.com/static/51b3dc8ee4b051b96ceb10de/t/5b6c578c6d2a73d8b858effe/1533826960027/?format=2500w) no-repeat; background-size: cover; background-position: center center; }
+.img-solution-w-1 { background: url(https://hips.hearstapps.com/esq.h-cdn.co/assets/cm/15/06/54d428b7b3d6a_-_esq-deep-de.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-solution-w-2 { background: url(https://media.giphy.com/media/SbsHOPT5DgAog/giphy.gif) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-results-homepage { background: url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/01/09/14/snap.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-results-register { background: url(https://i.pinimg.com/originals/b8/2c/9a/b82c9ac2b0bf462de984ba19563c2463.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+
+.img-verify1 { background: url(../img/ul-verify/verify_03_ContentStrategy.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-verify2 { background: url(../img/ul-verify/verify_04_ResponsiveDesign.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-verify3 { background: url(../img/ul-verify/verify_05_AdvancedWP.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-verify4 { background: url(../img/ul-verify/verify_06_ExtendingTheBrand.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+
+.img-chabad1 { background: url(../img/chabad/chabad_03_ContentStrategy.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-chabad2 { background: url(../img/chabad/chabad_04_ResponsiveDesign.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-chabad3 { background: url(../img/chabad/Chabad_05_SocialSupport.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+
+.img-fedex1 { background: url(../img/fedex/fedex_02_OurSolution.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-fedex2 { background: url(../img/fedex/fedex_03_Research.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-fedex3 { background: url(../img/fedex/fedex_04_rethinkingUX.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-fedex4 { background: url(../img/fedex/fedex_05_ImprovingTheUI.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+
+.img-parkjockey1 { background: url(../img/parkjockey/parkjockey03_ExperienceResearch.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-parkjockey2 { background: url(../img/parkjockey/parkjockey04_UXRefinement.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-parkjockey3 { background: url(../img/parkjockey/parkjockey05_UIFacelift.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+
+.img-celebrity1{ background: url(../img/celebrity/celebrity_02_InformationArch.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-celebrity2{ background: url(../img/celebrity/celebrity03_creativeCollaboration.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+
+.img-medical1{ background: url(../img/medicalSolutions/ULMedical_img01.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-medical2{ background: url(../img/medicalSolutions/ULMedical_img02.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-medical3{ background: url(../img/medicalSolutions/ULMedical_img03.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+
+.img-customerPortal0{ background: url(../img/customerPortal/ULCustomer_Hero_in.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-customerPortal1{ background: url(../img/customerPortal/ulportal_dscf3537.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-customerPortal2{ background: url(../img/customerPortal/ulportal_03_interfacedesign.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+.img-customerPortal3{ background: url(../img/customerPortal/ulportal_04_intentionalcollaboration.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important; }
+
+.img-tudorIce1{ background: url(../img/tudorIce/tudor_02_backstory.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important;}
+.img-tudorIce2{ background: url(../img/tudorIce/tudor_03_oursolution.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important;}
+.img-tudorIce3{ background: url(../img/tudorIce/tudor_04_inspireddesign.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important;}
+.img-tudorIce4{ background: url(../img/tudorIce/tudor_05_impact.jpg) no-repeat !important; background-size: cover !important; background-position: center top !important;}
+
+.img-team-chinmoy-raval { background: url(../img/team/chinmoy-raval.jpg) no-repeat; background-size: cover; }
+.img-team-agustin-sanchez { background: url(../img/team/agustin-sanchez.jpg) no-repeat; background-size: cover; }
+
+.img-susan { background: url(../img/walgreens/susan.jpg) no-repeat; background-size: cover; }
+
+.img-effect {
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.16);
+  // border: 2px solid #E1E8EE;
+}

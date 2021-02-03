@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="910px" height="670px" viewBox="0 0 910 670" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Mobile Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="455" cy="342" r="210"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="420" height="420" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Mobile-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(159.000000, 52.000000)">
+            <circle id="Oval" stroke="#2D2D6F" fill="#2D2D6F" cx="115.5" cy="40.5" r="6.5"></circle>
+            <path d="M112,37 L154,81" id="Path-2" stroke="#2D2D6F" stroke-width="4" fill="#2D2D6F"></path>
+            <text id="Promotions" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#444444">
+                <tspan x="0" y="49">Promotions</tspan>
+            </text>
+            <text id="Offers" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#444444">
+                <tspan x="0" y="78">Offers</tspan>
+            </text>
+            <text id="Retention" font-family="Roboto-Medium, Roboto" font-size="21" font-weight="400" fill="#444444">
+                <tspan x="0" y="19">Retention</tspan>
+            </text>
+        </g>
+        <g id="Group-2" transform="translate(500.000000, 0.000000)">
+            <circle id="Oval" stroke="#FFEA00" fill="#FFEA00" cx="10.5" cy="38.5" r="6.5"></circle>
+            <path d="M10,39 L0,91" id="Path-2" stroke="#FFEA00" stroke-width="4" fill="#FFEA00"></path>
+            <text id="Shop" font-family="Roboto-Medium, Roboto" font-size="21" font-weight="400" fill="#444444">
+                <tspan x="12" y="19">Shop</tspan>
+            </text>
+        </g>
+        <g id="Group-5" transform="translate(104.000000, 549.000000)">
+            <circle id="Oval" stroke="#4BA8F5" fill="#4BA8F5" cx="164.5" cy="45.5" r="6.5"></circle>
+            <path d="M198,0 L166,44" id="Path-2" stroke="#4BA8F5" stroke-width="4" fill="#FFEA00"></path>
+            <text id="Promotions," font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#444444">
+                <tspan x="21" y="87">Promotions,</tspan>
+            </text>
+            <text id="Maintenance" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#444444">
+                <tspan x="123" y="87">Maintenance</tspan>
+            </text>
+            <text id="Featured-Content" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#444444">
+                <tspan x="21" y="116">Featured Content</tspan>
+            </text>
+            <text id="Service" font-family="Roboto-Medium, Roboto" font-size="21" font-weight="400" fill="#444444">
+                <tspan x="20" y="57">Service</tspan>
+            </text>
+        </g>
+        <g id="Group-3" transform="translate(589.000000, 38.000000)">
+            <circle id="Oval" stroke="#FF8A80" fill="#FF8A80" cx="27.5" cy="38.5" r="6.5"></circle>
+            <path d="M28,38 L0,86" id="Path-2" stroke="#FF8A80" stroke-width="4" fill="#FF8A80"></path>
+            <text id="Purchase" font-family="Roboto-Medium, Roboto" font-size="21" font-weight="400" fill="#444444">
+                <tspan x="33" y="19">Purchase</tspan>
+            </text>
+        </g>
+        <g id="Group-4" transform="translate(660.000000, 135.000000)">
+            <circle id="Oval" stroke="#EF4F53" fill="#EF4F53" cx="44.5" cy="22.5" r="6.5"></circle>
+            <path d="M49,20 L0,54" id="Path-2" stroke="#EF4F53" stroke-width="4" fill="#EF4F53"></path>
+            <text id="Registration" font-family="Roboto-Medium, Roboto" font-size="21" font-weight="400" fill="#444444">
+                <tspan x="63" y="19">Registration</tspan>
+            </text>
+            <text id="Welcome," font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#444444">
+                <tspan x="63" y="49">Welcome,</tspan>
+            </text>
+            <text id="How-To’s" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#444444">
+                <tspan x="146" y="49">How-To’s</tspan>
+            </text>
+            <text id="Featured-Content" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" fill="#444444">
+                <tspan x="63" y="78">Featured Content</tspan>
+            </text>
+        </g>
+        <use id="Oval" stroke="#E1E8EE" mask="url(#mask-2)" stroke-width="12" stroke-dasharray="10,20" xlink:href="#path-1"></use>
+        <circle id="Oval" stroke="#E1E8EE" stroke-width="6" opacity="0.699999988" transform="translate(455.000000, 341.000000) rotate(198.000000) translate(-455.000000, -341.000000) " cx="455" cy="341" r="240"></circle>
+        <path d="M455,581 C587.54834,581 695,473.54834 695,341 C695,208.45166 587.54834,101 455,101 C322.45166,101 215,208.45166 215,341 C215,473.54834 322.45166,581 455,581 Z" id="Oval" stroke="#FFEA01" stroke-width="8" stroke-dasharray="76,1448" transform="translate(455.000000, 341.000000) rotate(198.000000) translate(-455.000000, -341.000000) "></path>
+        <path d="M455,581 C587.54834,581 695,473.54834 695,341 C695,208.45166 587.54834,101 455,101 C322.45166,101 215,208.45166 215,341 C215,473.54834 322.45166,581 455,581 Z" id="Oval" stroke="#FF8A80" stroke-width="8" stroke-dasharray="76,1448" transform="translate(455.000000, 341.000000) rotate(220.000000) translate(-455.000000, -341.000000) "></path>
+        <path d="M455,581 C587.54834,581 695,473.54834 695,341 C695,208.45166 587.54834,101 455,101 C322.45166,101 215,208.45166 215,341 C215,473.54834 322.45166,581 455,581 Z" id="Oval" stroke="#EF4F53" stroke-width="8" stroke-dasharray="76,1448" transform="translate(455.000000, 341.000000) rotate(242.000000) translate(-455.000000, -341.000000) "></path>
+        <path d="M455,581 C587.54834,581 695,473.54834 695,341 C695,208.45166 587.54834,101 455,101 C322.45166,101 215,208.45166 215,341 C215,473.54834 322.45166,581 455,581 Z" id="Oval" stroke="#2D2D6F" stroke-width="8" stroke-dasharray="226,1448" transform="translate(455.000000, 341.000000) rotate(175.000000) translate(-455.000000, -341.000000) "></path>
+        <path d="M455,581 C587.54834,581 695,473.54834 695,341 C695,208.45166 587.54834,101 455,101 C322.45166,101 215,208.45166 215,341 C215,473.54834 322.45166,581 455,581 Z" id="Oval" stroke="#4BA8F5" stroke-width="8" stroke-dasharray="962,1308" transform="translate(455.000000, 341.000000) rotate(116.000000) translate(-455.000000, -341.000000) "></path>
+    </g>
+</svg>

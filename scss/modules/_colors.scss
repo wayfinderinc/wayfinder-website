@@ -1,0 +1,19 @@
+$gray-01:              #969696;
+$gray-02:              #333333;
+
+$red:                  #FF3C49;
+$red-02:               #FF5252;
+$red-hover:            darken($red, 20%);
+
+$yellow:               #FFEA00;
+
+$blue-sky:             #4BA8F5;
+
+
+.bg-yellow {
+  background-color: $yellow;
+}
+
+.blue-sky {
+  background-color: $blue-sky;
+}

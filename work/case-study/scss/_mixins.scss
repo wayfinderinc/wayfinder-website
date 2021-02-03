@@ -1,0 +1,22 @@
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "desktop-w-xl" {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "desktop-w-normal" {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "desktop-w-s" {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "tablet-w" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}

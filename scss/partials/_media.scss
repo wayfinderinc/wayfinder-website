@@ -1,0 +1,305 @@
+@include media-breakpoint-up(sm) {
+  #wf-home {
+    .title {
+      @include font-size(72);
+    }
+
+    .text {
+      @include font-size(21);
+    }
+  }
+
+  .wf-services__item {
+    h3 {
+      @include font-size(16);
+    }
+  }
+
+  #wf-work-with-us {
+    h3 {
+      @include font-size(24);
+    }
+
+    .btn-border-gray {
+      @include font-size(18);
+    }
+  }
+
+  #wf-testimonial {
+    .text {
+      @include font-size(32);
+    }
+
+    .rounded-circle {
+      max-width: 387px;
+    }
+  }
+
+  #wf-our-work {
+    .title {
+      @include font-size(60);
+    }
+
+    .text {
+      @include font-size(21);
+    }
+
+    .btn-border-red {
+      @include font-size(13);
+    }
+
+    .our-work-hero {
+      max-width: 590px;
+    }
+  }
+
+  .clients-images {
+    li:nth-child(1) img {width: 65px;}
+    li:nth-child(2) img {width: 123px;}
+    li:nth-child(3) img {width: 164px;}
+    li:nth-child(4) img {width: 192px;}
+    li:nth-child(5) img {width: 192px;}
+    li:nth-child(6) img {width: 164px;}
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .text-md-right {
+    text-align: right;
+  }
+
+  #wf-home {
+    .title {
+      @include font-size(96);
+    }
+
+    .text {
+      @include font-size(21);
+    }
+  }
+
+  #wf-experience,
+  #wf-services {
+    .title {
+      @include font-size(41);
+    }
+
+    .text {
+      @include font-size(21);
+    }
+
+    li {
+      @include font-size(14);
+    }
+
+    .btn-border-gray {
+      @include font-size(13);
+    }
+  }
+
+  .btn-border-gray {
+    border-width: 6px;
+  }
+
+  .wf-services__item {
+    h3 {
+      @include font-size(18);
+    }
+  }
+
+  #wf-testimonial {
+    .text {
+      @include font-size(24);
+    }
+
+    .rounded-circle {
+      max-width: 440px;
+    }
+
+    h4 {
+      @include font-size(24);
+    }
+  }
+
+  #wf-our-work {
+    .our-work-hero {
+      max-width: 740px;
+    }
+  }
+
+  .clients-images {
+    li:nth-child(1) img {width: 60px;}
+    li:nth-child(2) img {width: 112px;}
+    li:nth-child(3) img {width: 152px;}
+    li:nth-child(4) img {width: 204px;}
+    li:nth-child(5) img {width: 204px;}
+    li:nth-child(6) img {width: 152px;}
+  }
+}
+
+@include media-breakpoint-up(lg) {
+
+  #wf-home {
+    .title {
+      @include font-size(120);
+    }
+
+    .text {
+      @include font-size(24);
+    }
+  }
+
+  #wf-experience,
+  #wf-services {
+    .title {
+      @include font-size(56);
+    }
+
+    .text {
+      @include font-size(28);
+    }
+
+    .btn-border-gray {
+      border-width: 9px;
+      @include font-size(19);
+    }
+  }
+
+  .wf-services__list {
+    li {
+      img {
+        width: 26px;
+      }
+
+      &:nth-child(1) img {width: 15px;}
+      &:nth-child(4) img,
+      &:nth-child(9) img,
+      &:nth-child(11) img {width: 30px;}
+
+      &:nth-child(11) {
+        h3 {
+          @include font-size(20);
+        }
+      }
+    }
+  }
+
+  .wf-services__item {
+    h3 {
+      @include font-size(22);
+      padding-left: 40px;
+    }
+
+    p {
+      @include font-size(17);
+    }
+  }
+
+  #wf-testimonial {
+    .text {
+      @include font-size(32);
+    }
+  }
+
+  #wf-our-work {
+    .title {
+      @include font-size(72);
+    }
+  }
+
+  .wf-case-stuides {
+    .sub-title {
+      @include font-size(42);
+    }
+
+    a {
+      @include font-size(24);
+    }
+  }
+
+  .clients-images {
+    li:nth-child(1) img {width: 84px;}
+    li:nth-child(2) img {width: 157px;}
+    li:nth-child(3) img {width: 214px;}
+    li:nth-child(4) img {width: 287px;}
+    li:nth-child(5) img {width: 287px;}
+    li:nth-child(6) img {width: 214px;}
+  }
+}
+
+@include media-breakpoint-down(md) {
+  #wf-home {
+    .form-control {
+      @include font-size(12);
+    }
+
+    .btn-red {
+      @include font-size(10);
+      padding: .6rem 1rem;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  #wf-home {
+    .title {
+      @include font-size(72);
+    }
+
+    .text {
+      @include font-size(21);
+    }
+  }
+
+  #wf-experience {
+    img {
+      max-width: 520px;
+      width: 100%;
+    }
+
+    .text {
+      @include font-size(21);
+    }
+
+    .btn-border-gray {
+      @include font-size(13);
+    }
+  }
+
+  #wf-services {
+    .text {
+      @include font-size(21);
+    }
+  }
+
+  .text-sm-center {
+    text-align: center;
+  }
+
+  #wf-testimonial {
+    .rounded-circle {
+      max-width: 130px;
+    }
+
+    .svg {
+      width: 37px;
+    }
+
+    h4 {
+      @include font-size(14);
+    }
+
+    .text {
+      @include font-size(18);
+    }
+  }
+
+  .clients-images {
+    li:nth-child(1) img {width: 60px;}
+    li:nth-child(2) img {width: 112px;}
+    li:nth-child(3) img {width: 152px;}
+    li:nth-child(4) img {width: 204px;}
+    li:nth-child(5) img {width: 204px;}
+    li:nth-child(6) img {width: 152px;}
+  }
+}

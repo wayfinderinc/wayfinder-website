@@ -1,0 +1,41 @@
+.wf-grid-line {
+  width: 1px;
+  height: 100%;
+  background: $black;
+  opacity: .1;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  &--left-out {
+    left: 15px;
+  }
+
+  &--left-mid {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+      left: 25%;
+      transform: translateX(10px);
+    }
+  }
+
+  &--center {
+    left: 50%;
+  }
+
+  &--right-mid {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+      left: 75%;
+      transform: translateX(-10px);
+    }
+  }
+
+  &--right-out {
+    right: 15px;
+  }
+}

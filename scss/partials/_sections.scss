@@ -1,0 +1,136 @@
+.wf-section {
+
+}
+
+#wf-home {
+  .title {
+    @include font-size(12);
+  }
+
+  .text {
+    @include font-size(10);
+  }
+}
+
+
+#wf-experience {
+  .title {
+    @include font-size(28);
+  }
+
+  .text {
+    @include font-size(14);
+  }
+
+  li {
+    @include font-size(14);
+  }
+}
+
+#wf-services{
+  hr {
+    border-color: $gray-01;
+  }
+}
+
+.wf-services__list {
+  li {
+    img {
+      width: 21px;
+    }
+
+    &:nth-child(1) img {width: 12px;}
+    &:nth-child(4) img,
+    &:nth-child(9) img,
+    &:nth-child(11) img {width: 24px;}
+  }
+}
+
+.wf-services__item {
+  h3 {
+    color: $red-02;
+    @include font-size(18);
+    padding-left: 34px;
+
+    img {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  p {
+    @include font-size(14);
+  }
+}
+
+.btn-view-more-services {
+  @include font-size(10);
+  border-radius: 30px !important;
+}
+
+#wf-work-with-us {
+  h3 {
+    @include font-size(14);
+  }
+
+  .btn-border-gray {
+    @include font-size(10);
+  }
+}
+
+#wf-testimonial {
+  .svg {
+    width: 60px;
+  }
+
+  .text {
+    @include font-size(18);
+  }
+
+  .rounded-circle {
+    width: 100%;
+  }
+
+  h4 {
+    @include font-size(24);
+  }
+}
+
+#wf-our-work {
+  .title {
+    @include font-size(28);
+  }
+
+  .text {
+    @include font-size(14);
+  }
+
+  .btn-border-red {
+    @include font-size(10);
+  }
+
+  .our-work-hero {
+    max-width: 280px;
+    width: 100%;
+  }
+}
+
+.wf-case-stuides {
+  margin-top: -140px;
+
+  img {
+    max-width: 100%;
+  }
+
+  .sub-title {
+    @include font-size(32);
+    color: #444444;
+  }
+
+  a {
+    @include font-size(18);
+    font-weight: 700;
+    color: #444444;
+  }
+}

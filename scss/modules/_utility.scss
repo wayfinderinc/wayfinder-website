@@ -1,0 +1,17 @@
+// FONT SIZER REM
+@mixin font-size($sizeValue) {
+  font-size: ($sizeValue * .0625) + rem;
+}
+
+
+// FULL SCREEN HEIGHT
+.wf-h-full {
+  height: 100vh;
+}
+
+// BG IMAGE COVER
+.wf-bg-cover {
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

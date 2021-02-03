@@ -1,0 +1,16 @@
+.form-control {
+  @include font-size(18);
+
+  &::-webkit-input-placeholder {
+    color: $gray-01;
+  }
+  &::-moz-placeholder {
+    color: $gray-01;
+  }
+  &:-ms-input-placeholder {
+    color: $gray-01;
+  }
+  &:-moz-placeholder {
+    color: $gray-01;
+  }
+}
