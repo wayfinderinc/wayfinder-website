@@ -1,0 +1,162 @@
+.about-hero { display: flex; justify-content: center; align-items: center; position: relative; background: url(../creative/images/bg-about.jpg) no-repeat; background-size: cover; background-position: center center; width: 100%; height: 100vh; overflow: hidden;
+    @include respond-to(tablet) { max-height: 776px; }
+    @include respond-to(desktop-1280) { max-height: 960px; }
+    .content { padding: 48px 20px; margin-top: 0; 
+        @include respond-to(tablet) { padding: 56px; }
+        h1 { font-size: 40px; margin-left: -4px;
+            @include respond-to(tablet) { font-size: 60px; }
+            @include respond-to(desktop-1280) { font-size: 80px; margin-left: 0px; }
+        }
+        p { font-size: 18px; line-height: 1.7; padding: 28px 40px 0 0; color: #fff; 
+            @include respond-to(tablet) { font-size: 18px; max-width: 544px; padding: 32px 0 0; }
+            @include respond-to(desktop-1024) { font-size: 18px; }
+        }
+    }
+}
+
+.our-process-wrapper { padding: 56px 20px;
+    @include respond-to(tablet) { padding: 120px 0; }
+    .c-process { position: relative; display: flex; flex-direction: column; justify-content: space-between; width: 100%;
+        @include respond-to(tablet) { padding: 0 56px; }
+        @include respond-to(desktop-1280) { padding: 0; width: 1176px; }
+        @include respond-to(desktop-1366) { width: 1366px; }
+        .c-process-copy { width: 100%;
+            @include respond-to(desktop-1280) { width: 48%; }
+            h3 { font-family: "Replica-Bold", sans-serif !important; font-size: 32px; padding-bottom: 16px; 
+                @include respond-to(tablet) { font-size: 36px; }
+            }
+            p { font-size: 18px; line-height: 1.7; }
+        }
+        .spacer { display: flex; justify-content: center; position: relative; width: 100%; height: 198px; padding: 40px 0; display: none;
+          @include respond-to(tablet) { height: 308px; }
+          @include respond-to(desktop-1280) { height: 510px; }
+        }
+        .img-process { display: flex; justify-content: center; position: relative; width: 335px; height: 198px; padding:40px 0; margin: auto; display: none;
+          @include respond-to(tablet) { width: 657px; height: 308px; }
+          @include respond-to(desktop-1280) { width: 1176px; height: 490px; }
+          @include respond-to(desktop-1366) { width: 1248px; height: 510px; }
+        }
+        .c-processes { display: flex; flex-wrap: wrap; flex-direction: column; position: relative; width: 100%;
+          @include respond-to(tablet) { flex-direction: row; justify-content: space-between; }
+          .process { display: flex; flex-direction: column; width: 100%; padding-bottom: 32px;
+            @include respond-to(tablet) { flex: 0 0 47%; max-width: 47%; padding-bottom: 48px; }
+            @include respond-to(desktop-1280) { flex: 0 0 18%; max-width: 18%; padding-bottom: 0px; }
+            &:last-child { padding-bottom: 0; }
+            .sub-title { padding-bottom: 8px; font-weight: 700; font-size: 18px;
+                @include respond-to(tablet) { font-size: 24px; }
+                @include respond-to(desktop-1366) { font-size: 24px; }
+            }
+            hr { width: 100%; height: 6px; border-radius: 3px; border: none; background: #444; margin: 4px 0 8px; }
+            .item-text { font-size: 14px; line-height: 21px; padding-top: 8px; }
+          }
+        }
+    }
+    #processAnimation { display: block; }
+    #ourProcess { position: absolute; background: #fff; top: 0px; }
+    #ourProcessColored { display: none; }
+    #ourProcessGrey { opacity: 1; }
+    .our-process { position: absolute; width: 100%; height: 100%;
+      @include respond-to(tablet) { width: 657px; }
+      @include respond-to(desktop-1280) { width: 1176px; }
+      @include respond-to(desktop-1366) { width: 1248px; }
+    }
+}
+
+.mission-vision-values { position: relative; width: 100%; height: 100%;
+    .slick-slider {
+        .slider-content { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 72vh; padding: 0 20px;
+            @include respond-to(tablet) { height: 80vh; max-height: 616px; padding: 0; }
+            @include respond-to(desktop-1280) { height: 94vh; max-height: 840px; }
+            & > div { position: relative; max-width: 672px;
+                .title { font-family: "Replica-Bold", sans-serif; font-size: 28px; color: #fff; padding-bottom: 16px; 
+                    @include respond-to(tablet) { font-size: 40px; padding-bottom: 24px; }
+                    @include respond-to(desktop-1280) { font-size: 60px; padding-bottom: 40px; }
+                }
+                p { font-size: 18px; line-height: 1.7; color: #fff;
+                    @include respond-to(tablet) { font-size: 21px; }
+                    @include respond-to(desktop-1280) { font-size: 24px; }
+                    @include respond-to(desktop-1366) { font-size: 28px; }
+                }
+            }
+        }
+        .mission { background: url(../creative/images/mission.jpg) no-repeat; background-size: cover; background-position: center center; }
+        .vision { background: url(../creative/images/vision.jpg) no-repeat; background-size: cover; background-position: center center; }
+        .values { background: url(../creative/images/values.jpg) no-repeat; background-size: cover; background-position: center center; }
+        .slick-dots { bottom: 32px; }
+        .slick-dots li { width: 72px; height: 5px; }
+        .slick-dots li button { width: 72px; height: 5px; }
+        .slick-dots li button:before { content: ""; font-size: 32px; width: 72px; height: 5px; color: #fff; background: #fff; }
+        .slick-dots li.slick-active button:before { opacity: 1; }
+    }
+}
+
+.collaborate { background: #424242; padding: 56px 0;
+    & > div:first-child { display: flex; flex-direction: column; align-items: center; position: relative; width: 100%;
+        @include respond-to(tablet) { width: 80%; }
+        @include respond-to(desktop-1024) { width: 670px; }
+        h2 { width: 100%; font-size: 28px; color: #fff; padding-bottom: 8px;  margin-top: 12%;
+            @include respond-to(tablet) { font-size: 40px; margin-top: 16%; }
+            @include respond-to(desktop-1280) { font-size: 60px; }
+        }
+        p { width: 100%; font-size: 18px; line-height: 28px; text-align: center; color: #fff;
+            @include respond-to(tablet) { line-height: 32px; text-align: center; }
+            @include respond-to(desktop-1024) { font-size: 21px; line-height: 40px; text-align: center; }
+        }
+        .laptop { width: 650px; height: 286px; margin: -12px 0 0 88px;
+            @include respond-to(tablet) { width: 1000px; height: 438px; margin: -32px 0 0 138px; }
+            @include respond-to(desktop-1024) { width: 1323px; height: 580px; margin: -48px 0 0 180px; }
+        }
+    }
+}
+
+.chinmoy-quote { background: url(../creative/images/bg-quote.jpg) no-repeat; background-size: cover; background-position: center center; height: 72vh;
+    @include respond-to(tablet) { height: 80vh; }
+    @include respond-to(desktop-1280) { height: 94vh; }
+    & > div { display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 100%; color: #fff;
+        @include respond-to(tablet) { width: 80%; }
+        @include respond-to(desktop-1280) { width: 1120px; }
+        @include respond-to(desktop-1366) { width: 1130px; }
+        .oval { display: flex; justify-content: center; height: 64px; width: 64px; background-color: #FFEA00; box-shadow: 6px 6px 0 0 rgba(0,0,0,0.21); border-radius: 50%; align-items: center; font-size: 28px; color: #2D2D6F;
+          @include respond-to(tablet) { height: 83px; width: 83px; background-color: #FFEA00; box-shadow: 6px 6px 0 0 rgba(0,0,0,0.21); border-radius: 50%; font-size: 32px; }
+          img { max-width: 32px; }
+        }
+        h2 { width: 100%; text-align: center; padding: 32px 0 36px;
+          @include respond-to(tablet) { font-size: 40px; line-height: 1.2; padding: 40px 0; }
+          @include respond-to(desktop-024) { line-height: 1.5; }
+          @include respond-to(desktop-1280) { font-size: 56px; line-height: 80px; padding: 40px 0; }
+        }
+        .avatar { width: 50px; height: 50px; border-radius: 25px; background: rgba(255,255,255,0.5); border: 3px solid #fff; overflow: hidden; }
+        p { width: 100%; font-family: "Replica-Bold", sans-serif !important; width: 100%; padding: 8px; text-align: center; color: #fff;
+          @include respond-to(tablet) { line-height: 36px; width: 84%; font-weight: 700; padding-top: 12px; }
+        }
+    }
+}
+
+.wf-facts { position: relative; background: #424242; color: #fff; padding: 56px 20px;
+    @include respond-to(tablet) { padding: 120px 0; }
+    .video-container { position: absolute; overflow: hidden; width: 100%; height: 100%; top: 0; left: 0; margin-left: -20px; 
+        @include respond-to(tablet) { margin-left: 0px; }
+        #factsVid { position: absolute; left: 0; top: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; object-fit: fill; }
+    }
+    &_info { position: relative; display: flex; flex-direction: column; justify-content: space-between; width: 100%;
+        @include respond-to(tablet) { padding: 0 32px; }
+        @include respond-to(desktop-1280) { width: 1176px; }
+        @include respond-to(desktop-1366) { width: 1366px; }
+        h2 { opacity: .5; padding-bottom: 48px;
+          @include respond-to(tablet) { padding-bottom: 64px; }
+          @include respond-to(desktop-1280) { padding-bottom: 80px; }
+        }
+        &-data { position: relative; display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-between; width: 100%;
+          .facts { display: flex; flex-direction: column; flex: 0 0 46%; max-width: 46%; padding-bottom: 48px;
+            @include respond-to(tablet) { flex: 0 0 50%; max-width: 50%; padding-bottom: 64px; }
+            @include respond-to(desktop-1280) { flex: 0 0 25%; max-width: 25%; padding-bottom: 80px; }
+            .sub-title { padding-bottom: 12px; font-weight: 700; }
+            hr { height: 6px; border-radius: 3px; border: none; background: #444; }
+            .item-text { font-family: "Replica-Bold", sans-serif !important; font-weight: 700; font-size: 48px; line-height: normal; color: #fff;
+              @include respond-to(tablet) { font-size: 64px; }
+            }
+          }
+        }
+    }
+}
+

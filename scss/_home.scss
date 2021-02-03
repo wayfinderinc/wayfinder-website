@@ -1,0 +1,211 @@
+.home-experience { display: flex; flex-direction: column-reverse; justify-content: space-between; align-items: center; position: relative;
+    @include respond-to(tablet) { flex-direction: row; }
+    & > div { position: relative; width: 100%; flex: 1 1 100%; max-width: 100%; 
+        @include respond-to(tablet) { flex: 1 1 calc(50% - 16px); max-width: calc(50% - 16px); }
+        @include respond-to(desktop-1024) { flex: 1 1 calc(50% - 24px); max-width: calc(50% - 24px); }
+    }
+    & > div:first-child { display: flex; flex-direction: column; align-items: flex-start;
+        h2 { width: 100%; display: none;
+            @include respond-to(tablet) { display: block; }
+        }
+    }
+    & > div:last-child { 
+        h2 { display: block; padding-bottom: 24px;
+            @include respond-to(tablet) { display: none; }
+        }
+    }
+    h4 { width: 100%; padding: 24px 0; 
+        @include respond-to(tablet) { padding: 16px 0 24px; }
+    }
+    img { max-width: 500px; float: right; }
+    .btn { display: flex; align-items: center; width: max-content; height: 56px; background: #fff; border: 8px solid #333; font-size: 16px; border-radius: 30px; transition: .25s background ease-out; cursor: pointer;
+        @include respond-to(desktop-1280) { height: 56px; font-size: 16px; }
+        @include respond-to(desktop-1366) { height: 60px; font-size: 18px; }
+        a { display: flex; align-items: center; position: relative; font-family: "Replica-Bold", sans-serif; color: #333; height: 60px; padding: 0 20px; 
+            .arrow-dark { position: relative; width: 12px; height: 14px; background: url(../creative/arrow-right-dark.svg); background-size: cover; margin: -2px 0 0 12px; }
+            .arrow-light { position: absolute; width: 12px; height: 14px; background: url(../creative/arrow-right.svg); background-size: cover; margin: -2px 0 0 12px; top: 50%; transform: translateY(-50%); right: 20px; opacity: 0; }
+        }
+        &:hover { background:#333; }
+        &:hover a { color: #fff; }
+        &:hover a .arrow-light { opacity: 1; }
+    }
+}
+
+.home-services { position: relative;
+    h4 { padding: 16px 0 24px; }
+    hr { margin: 4px 0 0; border: 0; border-top: 1px solid rgba(0,0,0,0.25); }
+    .card-set { display: flex; flex-wrap: wrap; position: relative; margin-left: -12px; margin-right: -12px; padding-top: 56px;
+        @include respond-to(tablet) { padding-top: 64px; }
+        @include respond-to(desktop-1024) { padding-top: 80px; }
+        &__card { position: relative; flex: 0 0 100%; max-width: 100%; padding-left: 12px; padding-right: 12px; margin-bottom: 48px;
+            @include respond-to(tablet) { flex: 0 0 50%; max-width: 50%; }
+            @include respond-to(desktop-1024) { flex: 0 0 33.3%; max-width: 33.3%; }
+            @include respond-to(desktop-1280) { flex: 0 0 25%; max-width: 25%; }
+            &__card-body { display: flex; flex-direction: column; justify-content: space-between; position: relative;
+                &__title { display: flex; align-items: center; position: relative; font-family: "Replica-Bold", sans-serif; font-size: 20px; color: $brand-color;
+                    @include respond-to(desktop-1024) { font-size: 21px; }
+                    @include respond-to(desktop-1280) { font-size: 22px; }
+                    img { position: relative; margin-right: 12px; }
+                }
+                p { font-size: 16px; line-height: 24px; padding-top: 16px; }
+            }
+        }
+    }
+}
+
+.our-work { position: relative; background: url(../creative/images/our-work-bg.jpg) no-repeat; background-size: cover; padding: 40px 0 80px;
+    @include respond-to(desktop-1024) { padding: 56px 0 96px; }
+    @include respond-to(desktop-1280) { padding: 72px 0 96px; }
+    @include respond-to(desktop-1366) { padding: 144px 0; }
+}
+
+.explore-work { position: relative; display: flex; flex-direction: column-reverse; justify-content: space-between; align-items: center;
+    @include respond-to(tablet) { flex-direction: row; }
+    & > div { position: relative; width: 100%; flex: 1 1 100%; max-width: 100%; 
+        @include respond-to(tablet) { flex: 1 1 calc(50% - 16px); max-width: calc(50% - 16px); }
+        @include respond-to(desktop-1024) { flex: 1 1 calc(50% - 24px); max-width: calc(50% - 24px); }
+    }
+    & > div:first-child { display: flex; flex-direction: column; align-items: flex-start;
+        h2 { display: none;
+            @include respond-to(tablet) { display: block; }
+        }
+    }
+    & > div:last-child { display: flex; flex-direction: column; align-items: center; justify-content: center; 
+        h2 { display: block; width: 100%; padding: 0 50% 24px 0;
+            @include respond-to(tablet) { display: none; }
+        }
+    }
+    img { width: 100%; height: 100%; max-width: 300px; @include aspect-ratio(1,1);
+        @include respond-to(tablet) { max-width: 100%; }
+    }
+    h2 { width: 100%; font-size: 32px; margin: 0;
+        @include respond-to(desktop-1024) { font-size: 40px; }
+        @include respond-to(desktop-1280) { font-size: 60px; padding: 0 80px 0 0; }
+        @include respond-to(desktop-1366) { font-size: 72px; padding: 0; }
+    }
+    h5 { width: 100%; max-width: 500px; padding: 28px 0 24px;
+        @include respond-to(tablet) { padding: 20px 0 24px; }
+        @include respond-to(desktop-1024) { padding: 20px 0 24px; }
+        @include respond-to(desktop-1280) { padding: 16px 0 24px; }
+        @include respond-to(desktop-1366) { padding: 12px 0 20px; }
+    }
+    .btn { display: flex; align-items: center; width: max-content; height: 44px; border: 4px solid #FF5252; font-size: 14px; border-radius: 30px; transition: .25s background ease-out; cursor: pointer;
+        @include respond-to(desktop-1280) { height: 52px; font-size: 16px; }
+        a { display: flex; align-items: center; position: relative; font-family: "Replica-Bold", sans-serif; color: #FF5252; height: 52px; padding: 0 20px; 
+            .arrow-dark { position: relative; width: 12px; height: 14px; background: url(../creative/arrow-right-brand.svg); background-size: cover; margin: -2px 0 0 12px; }
+            .arrow-light { position: absolute; width: 12px; height: 14px; background: url(../creative/arrow-right.svg); background-size: cover; margin: -2px 0 0 12px; top: 50%; transform: translateY(-50%); right: 20px; opacity: 0; }
+        }
+        &:hover { background:#FF5252; }
+        &:hover a { color: #fff; }
+        &:hover a .arrow-light { opacity: 1; }
+    }
+}
+
+.case-studies { margin-top: -48px;
+    @include respond-to(tablet) { margin-top: -48px; }
+    @include respond-to(desktop-1280) { margin-top: -120px; }
+    @include respond-to(desktop-1366) { margin-top: -96px; }
+    h3 { padding-bottom: 40px; 
+        @include respond-to(desktop-1280) { padding-bottom: 32px; }
+        @include respond-to(desktop-1366) { padding-bottom: 40px; }
+    }
+    .card-set.gallery { display: flex; flex-wrap: wrap; position: relative; margin-left: -12px; margin-right: -12px;
+        .card { position: relative; flex: 0 0 100%; max-width: 100%; padding-left: 12px; padding-right: 12px; margin-bottom: 36px;
+            @include respond-to(tablet) { flex: 0 0 50%; max-width: 50%; }
+            @include respond-to(desktop-1280) { flex: 0 0 25%; max-width: 25%; }
+            .card-body { display: flex; flex-direction: column; position: relative; background: #fff; height: 100%; overflow: hidden; transition: all 0.2s ease-out; 
+                a { display: flex; flex-direction: column; height: 100%; cursor: pointer; color: inherit;
+                    &:link, &:visited, &:active { color: inherit; }
+                    &:hover { color: inherit; }
+                }
+                .img-wrapper { position: relative; width: 100%; height: auto; vertical-align: top; background-color: #fff; overflow: hidden;
+                    img { border: 0; clip: rect(1px, 1px, 1px, 1px); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+                    .img { position: relative; top: 0px; left: 0px; width: 100%; @include aspect-ratio(16,9); transition: all 0.2s ease-out; }
+                    .parkjockey { background: url(../creative/images/case-study_parkjockey.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center; }
+                    .ul { background: url(../creative/images/case-study-ul-medicalsolutions.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center; }
+                    .chabad { background: url(../creative/images/case-study-chabad.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center; }
+                    .fedex { background: url(../creative/images/case-study-fedex.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center; }
+                }
+                .info { display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; width: 100%; padding: 16px 0;
+                    .title { font-size: 21px; font-weight: 700; line-height: 1.5; 
+                        @include respond-to(desktop-1280) { padding-bottom: 21px; }
+                        @include respond-to(desktop-1366) { padding-bottom: 24px; }
+                    }
+                }
+                &:hover .title { text-decoration: underline; }
+                &:hover .img { transform: scale(1.1); }
+            }
+        }
+    }
+}
+
+.client-logos {
+    & > div { display: flex; flex-direction: column; align-items: center; position: relative; 
+        @include respond-to(tablet) { flex-direction: row; justify-content: center; }
+    }
+    & > div:first-child {  
+        @include respond-to(tablet) { padding-bottom: 96px; }
+    }
+    & > div:last-child {  
+        @include respond-to(tablet) { padding-bottom: 48px; }
+    }
+    .ul { max-width: 60px; margin: 0 0 96px; 
+        @include respond-to(tablet) { max-width: 60px; margin: 0 56px; }
+        @include respond-to(desktop-1024) { margin: 0 88px; }
+        @include respond-to(desktop-1366) { max-width: 84px; }
+    }
+    .fedex { max-width: 112px; margin: 0 0 96px; 
+        @include respond-to(tablet) { max-width: 112px; margin: 0 56px; }
+        @include respond-to(desktop-1024) { margin: 0 88px; }
+        @include respond-to(desktop-1366) { max-width: 157px; }
+    }
+    .toyota { max-width: 152px; margin: 0 0 96px; 
+        @include respond-to(tablet) { max-width: 152px; margin: 0 56px; }
+        @include respond-to(desktop-1024) { margin: 0 88px; }
+        @include respond-to(desktop-1366) { max-width: 214px; }
+    }
+    .celebrity { max-width: 204px; margin: 0 0 96px; 
+        @include respond-to(tablet) { max-width: 204px; margin: 0 24px; }
+        @include respond-to(desktop-1024) { margin: 0 40px; }
+        @include respond-to(desktop-1366) { max-width: 282px; }
+    }
+    .hitachi { max-width: 204px; margin: 0 0 96px; 
+        @include respond-to(tablet) { max-width: 204px; margin: 0 24px; }
+        @include respond-to(desktop-1024) { margin: 0 40px; }
+        @include respond-to(desktop-1366) { max-width: 282px; }
+    }
+    .emergo { max-width: 152px; margin: 0 0 48px;
+        @include respond-to(tablet) { max-width: 152px; margin: 0 24px; }
+        @include respond-to(desktop-1024) { margin: 0 40px; }
+        @include respond-to(desktop-1366) { max-width: 214px; }
+    }
+}
+
+.section-testimonial { background: #4BA8F5; padding: 56px 0; }
+
+.testimonial { display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+    @include respond-to(desktop-1024) { flex-direction: row; }
+    & > div { position: relative; width: 100%; flex: 1 1 100%; max-width: 100%; 
+        @include respond-to(tablet) { flex: 1 1 100%; max-width: 100%; }
+        @include respond-to(desktop-1024) { flex: 1 1 calc(48% - 24px); max-width: calc(48% - 24px); }
+    }
+    & > div:first-child { display: flex; justify-content: center;
+        @include respond-to(desktop-1366) { justify-content: flex-start; }
+    }
+    & > div:last-child { display: flex; flex-direction: column;
+    }
+    .client-poster { max-width: 136px; border-radius: 50%; 
+        @include respond-to(desktop-1024) { max-width: 440px; }
+    }
+    .quote-icon { max-width: 40px; order: 2; margin-top: 24px;
+        @include respond-to(desktop-1024) { max-width: 60px; order: 1; margin-top: 0; }
+    }
+    p { font-family: "Replica-Bold", sans-serif; font-size: 18px; line-height: 1.5; color: #fff; padding: 24px 0 0; order: 3; 
+        @include respond-to(desktop-1024) { font-size: 21px; order: 2; padding: 24px 0; }
+        @include respond-to(desktop-1280) { font-size: 24px; padding: 24px 40px 24px 0; }
+        @include respond-to(desktop-1366) { font-size: 32px; padding-right: 0; }
+    }
+    .client-position { font-size: 21px; color: #fff; order: 1; text-align: center; padding-top: 24px;
+        @include respond-to(desktop-1024) { font-size: 24px; order: 3; text-align: left; padding-top: 0; }
+    }
+}

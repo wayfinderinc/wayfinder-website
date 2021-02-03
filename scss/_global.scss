@@ -1,0 +1,30 @@
+* { -webkit-tap-highlight-color: rgba(0,0,0,0); box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;  }
+
+body { -webkit-touch-callout: none; -webkit-text-size-adjust: none; font-family: 'Roboto', sans-serif; font-weight: 400; color: #444; font-size: 18px; background-color:#fff; margin: 0px; overflow-x: hidden; }
+
+button, input, optgroup, select, textarea { font-family: inherit; font-size: inherit; margin: 0; }
+
+button { border: 0; outline: none; }
+
+a { text-decoration: none; }
+
+:root {
+    --body-copy-color: #444;
+    --brand-color: #FF5252;
+    --cloud-grey-color: #F3F5FA;
+    --blue-color: #4BA8F5;
+    --grimace-color: #2d2d6f;
+    --eggplant-color: #1F1F4C;
+    --coral-color: #FF8A80;
+    --yellow-color: #FFEA01;
+    --findyourway-color: #FF5252;
+}
+
+$body-copy-color: #444;
+$brand-color: #FF5252;
+$blue-color: #4BA8F5;
+$grimace-color: #2d2d6f;
+$eggplant-color: #1F1F4C;
+$coral-color: #FF8A80;
+$yellow-color: #FFEA01;
+$findyourway-color: #FF5252;

@@ -1,0 +1,39 @@
+.hero { display: flex; justify-content: center; align-items: center; position: relative; width: 100%; height: 94vh; overflow: hidden;
+    @include respond-to(tablet) { height: 100vh; }
+    .content { padding: 48px 20px; margin-top: 0; 
+        @include respond-to(tablet) { padding: 56px; }
+        h1 { font-size: 72px; margin-left: -4px;
+            @include respond-to(tablet) { font-size: 72px; }
+            @include respond-to(desktop-1280) { font-size: 96px; margin-left: -6px; }
+            @include respond-to(desktop-1366) { font-size: 120px; margin-left: -8px; }
+        }
+        p { font-size: 21px; line-height: 1.5; padding: 8px 0 24px; color: #fff; 
+            @include respond-to(mobile) { padding: 8px 20px 24px 0; }
+            @include respond-to(tablet) { max-width: 440px; padding: 8px 0 24px; }
+            @include respond-to(desktop-1024) { max-width: 440px; }
+            @include respond-to(desktop-1366) { font-size: 24px; padding: 0 0 24px; }
+        }
+        .form-email { display: flex;
+            input[type=text] { width: 144px; height: 44px; margin: 0; padding: 12px; box-sizing: border-box; font-size: 12px; font-weight: 400; color: $body-copy-color; border: 0; border-radius: 4px; 
+                @include respond-to(mobile) { width: 200px; font-size: 14px; padding: 16px; }
+                @include respond-to(tablet) { width: 264px; font-size: 18px; }
+                &:focus { outline: none; }
+            }
+            button { display: flex; align-items: center; height: 44px; background: #FFEA01; font-family: "Replica-Bold", sans-serif; font-size: 12px; color: #444; border-radius: 22px; margin-left: 12px; padding: 0 12px; transition: .25s background ease-out; cursor: pointer;
+                @include respond-to(mobile) { font-size: 16px; margin-left: 16px; padding: 0 16px; }
+                @include respond-to(tablet) { font-size: 18px; }
+                .arrow { position: relative; width: 10px; height: 11px; background: url(../creative/arrow-right-dark.svg) no-repeat; background-size: cover; margin: -2px 0 0 8px;
+                    @include respond-to(mobile) { width: 12px; height: 13px; }
+                    @include respond-to(tablet) { width: 14px; height: 15px; }
+                }
+                &:hover { background:lighten(#FFEA01,16%); }
+            }
+        }
+    }
+    .learn-more { display: flex; justify-content: center; align-items: center; position: absolute; width: 56px; height: 56px; background: rgba(#fff,0); border-radius: 50%; border: 6px solid #fff; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 999999; transition: .25s background ease-out; cursor: pointer; 
+        .arrow-light { position: relative; width: 100%; height: 100%; background-image: url(../creative/arrow-down-solid-white.svg); background-size: 24px; background-position: 50% 56%; background-repeat: no-repeat; }
+        .arrow-dark { position: absolute; width: 100%; height: 100%; background-image: url(../creative/arrow-down-solid-dark.svg); background-size: 24px; background-position: 50% 56%; background-repeat: no-repeat; opacity: 0;  transition: .25s opacity ease-out; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+        &:hover { background: rgba(#fff,1); }
+        &:hover .arrow-dark { opacity: 1; }
+    }
+}

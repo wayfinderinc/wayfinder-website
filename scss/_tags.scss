@@ -1,0 +1,27 @@
+h1, h2 { font-family: "Replica-Bold", sans-serif; }
+h3, h4, h5, p { font-family: 'Roboto', sans-serif;  }
+h1 { font-size: 32px; margin: 0; color: #fff;
+    @include respond-to(tablet) { font-size: 72px; }
+    @include respond-to(desktop-1280) { font-size: 96px; }
+    @include respond-to(desktop-1366) { font-size: 120px; }
+}
+h2 { font-size: 28px; margin: 0;
+    @include respond-to(tablet) { font-size: 32px; }
+    @include respond-to(desktop-1024) { font-size: 40px; }
+    @include respond-to(desktop-1366) { font-size: 56px; }
+}
+h3 { font-size: 32px; font-weight: 400; margin: 0;
+    @include respond-to(desktop-1024) { font-size: 32px; }
+    @include respond-to(desktop-1366) { font-size: 42px; }
+}
+h4 { font-size: 21px; line-height: 1.5; font-weight: 400; margin: 0; 
+    @include respond-to(desktop-1024) { font-size: 21px; }
+    @include respond-to(desktop-1366) { font-size: 28px; }
+}
+h5 { font-size: 21px; line-height: 1.5; font-weight: 400; margin: 0; }
+p { font-size: 16px; font-weight: 400; line-height: 26px; margin: 0; color: #444;
+    @include respond-to(desktop-1024) { font-size: 18px; line-height: 32px; }
+}
+p.small { font-size: 14px; font-weight: 400; line-height: 24px; margin: 0; 
+    @include respond-to(desktop-1024) { font-size: 16px; line-height: 28px; }
+}
