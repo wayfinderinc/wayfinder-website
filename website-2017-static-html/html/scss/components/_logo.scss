@@ -1,0 +1,23 @@
+#logo {
+   width: 115px;
+   display: block;
+   margin: 0;
+   position: fixed;
+   top: 10px;
+   z-index: 11;
+
+   @media (min-width: 768px) {
+      width: 250px;
+      position: fixed;
+   }
+
+   svg path {
+      fill: $dark-grey;
+   }
+
+   &.open {
+      svg path {
+         fill: $brand-white;
+      }
+   }
+}

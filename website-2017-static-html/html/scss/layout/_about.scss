@@ -1,0 +1,109 @@
+.about {
+   background: url(../img/about/about_bg_01.jpg) no-repeat 50% 0;
+   background-size: cover;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+//// our team section
+// ==============
+.our_team {
+   height: initial;
+   &_wrap { position: relative; }
+}
+
+.our_team_headshots {
+   &_wrap {
+      background: $brand-white;
+      padding-bottom: 50px;
+   }
+
+   img {
+      max-width: 175px;
+      margin: 25px auto;
+
+      @media (min-width: 768px) {
+         max-width: 125px;
+      }
+   }
+
+   h4, p {
+      text-align: center;
+   }
+
+   h4 {
+      color: $brand-blue;
+   }
+}
+
+// Great Things image
+// =========
+.great_things {
+   height: 100vh;
+   background: url(../img/about/great_things.jpg) no-repeat 50% 0;
+   background-size: cover;
+
+   &_header {
+      color: #fff;
+   }
+}
+
+
+// Interview
+// =============
+.interview {
+   height: 100vh;
+   background: url(../img/about/interview.jpg) no-repeat 50% 0;
+   background-size: cover;
+
+   &_header {
+      color: #fff;
+   }
+}
+
+// Services
+// ==============
+.services {
+   height: initial;
+
+   @media (min-width: 768px) {
+      height: 100vh;
+   }
+
+   h2, h4, p, ul {
+      color: $brand-white;
+   }
+
+   h4 {
+      border-bottom: 2px solid $brand-white;
+      padding-bottom: 10px;
+   }
+
+   p {
+      font-weight: 300;
+   }
+
+   ul {
+      padding-left: 20px;
+
+      li {
+         font-size: 80%;
+         margin-bottom: 10px;
+      }
+   }
+}
+
+// Read More
+// =======
+.read_more {
+   &_header {
+      color: $brand-blue;
+   }
+
+   &_text {
+      line-height: 1.5em;
+   }
+}

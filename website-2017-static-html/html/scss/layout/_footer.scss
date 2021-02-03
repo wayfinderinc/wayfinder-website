@@ -1,0 +1,80 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer-main {
+    @extend .clearfix;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25%;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, transform 0.5s, visibility 0s 0.5s;
+    z-index: 999;
+
+    @media (min-width: 768px) {
+      opacity: 1;
+      height: initial;
+      transform: translateY(0%);
+      transition: none;
+      visibility: visible;
+      // z-index: 1;
+   }
+
+}
+
+.footer-main.open {
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.social {
+   text-align: center;
+   margin: 50px 0 0 0;
+
+   @media (min-width: 768px) {
+      text-align: initial;
+      margin: 0 0 10px 0;
+      display: inline-block;
+   }
+}
+
+.copyright {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+      float: right;
+   }
+}
+
+.icon-social {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 40px;
+
+    @media (min-width: 768px) {
+      width: 15px;
+      height: 15px;
+   }
+
+    svg path {
+      fill: $brand-white;
+
+      @media (min-width: 768px) {
+         fill: $dark-grey;
+      }
+   }
+
+}
+
+.icon-social:last-child {
+    margin-right: 0;
+}

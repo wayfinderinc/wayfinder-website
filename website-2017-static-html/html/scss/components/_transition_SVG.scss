@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.transition_img {
+   width: 100%;
+   // transform: translateY(-98%);
+   position: absolute;
+   top: 0;
+   // transform: translateY(-50%);
+   background: #f1f1ef;
+   // visibility: hidden;
+
+}
+
+.transition_img.bottom {
+   top: inherit;
+   bottom: -65px;
+   transform: none;
+}
+
+.transition_img svg,
+.transition_img path {
+   width: 100%;
+}
+
+.transition_img.red path {
+   fill: $brand-red;
+}
+
+.transition_img.yellow path {
+   fill: $brand-yellow;
+}
+
+.transition_img.blue path {
+   fill: #4aa4ee;
+}
+
+.transition_img.white path {
+   fill: $brand-white;
+}
+
+.transition_img.grey path {
+   fill: $brand-grey;
+}
+
+.icon {
+   display: block;
+   width: 85px;
+   height:85px;
+   margin: 0 auto;
+}

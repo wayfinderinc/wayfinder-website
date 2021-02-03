@@ -1,0 +1,13 @@
+<svg version="1.1" id="gfx_right" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 30 905">
+	<g id="right_gfx">
+		<rect id="right_gfx_01" x="22" width="8" height="128"/>
+		<rect id="right_gfx_02" x="22" y="138" width="8" height="128"/>
+		<rect id="right_gfx_03" x="22" y="276" width="8" height="128"/>
+		<rect id="right_gfx_04" x="22" y="414" width="8" height="128"/>
+		<rect id="right_gfx_05" x="22" y="552" width="8" height="128"/>
+		<rect id="right_gfx_06" x="22" y="690" width="8" height="128"/>
+	</g>
+	<g id="group_05">
+		<rect id="vert_05" x="1" y="1" fill="none" width="1" height="904"/>
+	</g>
+</svg>

@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+header {
+   @extend .clearfix;
+   height: 40px;
+   width: 100%;
+   position: fixed;
+   z-index: 999;
+
+   @media (min-width: 768px) {
+      height: 50px;
+   }
+}

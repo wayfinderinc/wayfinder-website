@@ -1,0 +1,34 @@
+.section {
+   position: relative;
+   width: 100%;
+   // z-index: -1;
+   // padding-bottom: 100px;
+
+   @media (min-width: 768px) {
+      height: 100vh;
+      padding-bottom: 0px;
+   }
+
+   &.red {
+      background-color: $brand-red;
+      h1, h2, h3, h4, h5, p, span { color: $brand-white; }
+   }
+   &.grey { background-color: $brand-grey; }
+   &.yellow { background-color: $brand-yellow; }
+   &.blue { background-color: #4aa4ee; }
+
+} // end .section
+#section2 .container-fluid {
+   width: 98%;
+}
+
+
+#section6 .container-fluid {
+   @media (min-width: 1199px) {
+      padding-left: 60px;
+      padding-right: 60px;
+   }
+   @media (min-width: 1499px){
+      width: 90%;
+   }
+}

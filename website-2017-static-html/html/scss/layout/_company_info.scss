@@ -1,0 +1,65 @@
+.company-info {
+   height: 350px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   @media (min-width: 768px) {
+      height: 400px;
+      width: 100%;
+   }
+
+   h2 {
+      color: $brand-red;
+      font-size: 50px;
+      text-align: left;
+
+      @media (min-width: 768px) {
+         font-size: 60px;
+         text-align: center;
+      }
+   }
+
+   p, a {
+      color: $brand-blue;
+      font-size: 12px;
+      line-height: 3em;
+
+      @media (min-width: 768px) {
+         font-size: 18px;
+         line-height: 1.75em;
+         text-align: center;
+      }
+   }
+}
+
+.company-email,
+.company-address,
+.company-phone, {
+   &::before {
+      content: '';
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: 80% auto;
+      background-image: url(../img/companyInfo/company-email.svg);
+   }
+}
+
+.company-address::before {
+   background-image: url(../img/companyInfo/company-address.svg);
+   background-position: center bottom;
+   background-size: auto 90%;
+   transform: translateY(4px);
+}
+
+.company-phone::before {
+   background-image: url(../img/companyInfo/company-phone.svg);
+   background-position: center bottom;
+   background-size: auto 90%;
+   transform: translateY(4px);
+}

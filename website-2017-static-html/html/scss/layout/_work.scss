@@ -1,0 +1,98 @@
+// work header
+.work {
+   .header-message {
+      margin-top: 50px;
+      @media (min-width: 768px) {
+         margin-top: 25px;
+      }
+   }
+}
+
+.ourWork > .container-fluid {
+   padding-left: 55px;
+   padding-right: 40px;
+}
+
+.our-work-wrap {
+   padding: 0 35px;
+
+   .our-work-header {
+      color: #4aa4ee;
+      @media (min-width: 768px) {
+         font-size: 70px;
+      }
+   }
+   .underline {
+      height: 1px;
+      width: 100%;
+      background: #fc6061;
+      margin: 2em 0;
+   }
+
+   .our-work-msg {
+      color: #444;
+      @media (min-width: 768px) {
+         line-height: 2em;
+         margin-bottom: 2em;
+      }
+   }
+}
+
+
+
+
+.ourWorkChild,
+.ideasChild {
+   // display: none;
+   visibility: hidden;
+   position: absolute;
+   top: 0;
+   width: 100%;
+
+   &--header {
+      padding: 75px 0 100px;
+      margin: 0;
+      // min-height: 500px;
+
+      h1 {
+         @media (min-width: 768px) {
+            margin: 0;
+            font-size: 80px;
+         }
+      }
+
+      small {
+         font-size: 10px;
+      }
+   }
+
+   &--content .container {
+      @media (min-width: 768px) {
+         padding: 1.5em 1.5em 0;
+         transform: translateY(-75px);
+      }
+   }
+}
+
+.img {
+   &--grow {
+
+   }
+
+   &--ghost {
+       max-width: 200px;
+       margin: -10% auto 0;
+       opacity: 0;
+       @media (min-width: 768px) {
+          margin: -80% auto 0;
+          max-width: 100%;
+       }
+   }
+}
+
+// div that growing image gets appended to
+// .imgGrowEl {
+//    position: absolute;
+//    width: 100%;
+//    z-index: 1;
+// }

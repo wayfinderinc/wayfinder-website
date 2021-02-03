@@ -1,0 +1,167 @@
+.overlay {
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 z-index: 10;
+
+
+	 nav {
+		position: relative;
+		top: 50%;
+		height: 60%;
+		transform: translateY(-50%);
+		text-align: center;
+		font-size: 54px;
+	}
+}
+
+.overlay ul {
+	 position: relative;
+	 display: inline-block;
+	 height: 100%;
+	 margin: 0 auto;
+	 padding: 0;
+	 list-style: none;
+
+	 li {
+		display: block;
+		height: 20%;
+		height: calc(100% / 5);
+		min-height: 54px;
+	}
+}
+
+
+.overlay ul li a {
+	 display: block;
+	 transition: color 0.2s;
+	 color: #fff;
+	 font-weight: 300;
+	 &.active {
+		 border-bottom: 4px solid;
+	 }
+
+	 &:focus,
+	 &:hover {
+		color: #fff;
+	}
+}
+
+/* Effects */
+.overlay-main {
+	 visibility: hidden;
+	 transition: opacity 0.5s, visibility 0s 0.5s;
+	 opacity: 0;
+	 background: $brand-red;
+}
+
+.overlay-main.open {
+	 visibility: visible;
+	 transition: opacity 0.5s;
+	 opacity: 1;
+}
+
+.overlay-main nav {
+	 perspective: 1200px;
+
+	 ul {
+		transition: transform 0.5s, opacity 0.5s;
+		transform: translateY(-25%) rotateX(35deg);
+		opacity: 0.4;
+	}
+}
+
+.overlay-main.open nav ul {
+	 transform: rotateX(0deg);
+	 opacity: 1;
+}
+
+.overlay-main.close nav ul {
+	 transform: translateY(25%) rotateX(-35deg);
+}
+
+.overlay-close,
+.overlay-open {
+	 position: absolute;
+	 right: 15px;
+	 top: 10px;
+	 display: block;
+	 cursor: pointer;
+}
+
+
+// kill mobile menu on anything wider than 768
+@media (min-width: 768px) {
+	 .overlay-close,
+	 .overlay-open {
+		  display: none;
+	 }
+
+	 .overlay-main {
+		  position: absolute;
+		  z-index: 1;
+		  top: 10px;
+		  right: 20px;
+		  bottom: initial;
+		  left: initial;
+		  visibility: visible;
+		  width: auto;
+		  height: initial;
+		  transition: none;
+		  opacity: 1;
+		  background: transparent;
+	 }
+
+	 .overlay-main nav {
+		top: 0;
+		perspective: none;
+		height: initial;
+		transform: none;
+		font-size: initial;
+	 }
+
+	 .overlay-main nav ul {
+		  position: relative;
+		  display: inline-block;
+		  height: initial;
+		  margin: 0 auto;
+		  padding: 0;
+		  list-style: none;
+		  opacity: 1;
+		  transform: rotateX(0deg);
+	 }
+
+	 .overlay-main nav ul li {
+		  display: inline-block;
+		  margin-right: 20px;
+		  height: initial;
+		  min-height: initial;
+	 }
+
+	 .overlay-main nav ul li:last-child {
+		  margin-right: 0px;
+	 }
+
+	 .overlay-main nav ul li a {
+		  display: inline-block;
+		  transition: none;
+		  color: $dark-grey;
+		  font-size: 1.25rem;
+		  text-decoration: none;
+
+		  &:focus,
+		  &:hover {
+			 color: #000;
+		}
+	 }
+
+}
+
+@media (min-width: 1299px) {
+	.overlay-main nav ul li a {
+		 font-size: 1.75rem;
+		 text-decoration: none;
+	}
+}

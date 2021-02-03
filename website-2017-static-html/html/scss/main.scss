@@ -1,0 +1,48 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendor/normalize',
+  'vendor/grid';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// 4. Layout-related sections
+@import
+  'layout/sections',
+  'layout/about',
+  'layout/header',
+  'layout/footer',
+  'layout/company_info',
+  'layout/quotes',
+  'layout/work',
+  'layout/ideas',
+  'layout/services',
+  'layout/grid_design';
+
+// 5. Components
+@import
+  'components/logo',
+  'components/modules',
+  'components/button',
+  'components/nav',
+  // 'components/transition_SVG',
+  'components/slider',
+  'components/grid_page',
+  'components/ripple',
+  'components/colorify';
+
+// 6. Page-specific styles
+@import
+  'pages/home';

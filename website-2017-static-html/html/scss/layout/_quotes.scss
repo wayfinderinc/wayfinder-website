@@ -1,0 +1,153 @@
+// quote seciton
+.quote {
+   padding: 50px 0;
+
+   @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+}
+
+.quote .container-fluid {
+   overflow-x: hidden;
+
+   @media (min-width: 768px) {
+      overflow-x: visible;
+   }
+}
+
+.quote blockquote {
+   margin-top: 50px;
+   @extend .clearfix;
+
+   @media (min-width: 768px) {
+      // width: 80%;
+      max-width: 700px;
+      margin: 0;
+      padding: 0;
+   }
+
+   @media (min-width: 1199px)  {
+      max-width: 900px;
+   }
+
+   h2.h1 {
+      margin: 0 !important;
+      quotes: '\201c' '\201d';
+      position: relative;
+      color: $brand-blue;
+      z-index: 1;
+
+      @media (min-width: 768px) {
+         font-size: 50px;
+         padding-right: 150px;
+      }
+
+      @media (min-width: 1199px) {
+         font-size: 70px;
+      }
+
+   }
+
+   .quoteLeft {
+      // top: -100px;
+      // content: open-quote;
+      font-size: 300px;
+      height: 110px;
+      display: block;
+      line-height: 1;
+      position: absolute;
+      z-index: -1;
+      top: -75px;
+      left: -30px;
+      color: #fff;
+
+      @media (min-width: 768px){
+         font-size: 150px;
+         top: -4px;
+         left: -60px;
+         height: auto;
+      }
+   }
+
+   .quote-image {
+      max-width: 190px;
+      transform: translateY(-10px);
+      margin-left: auto;
+      margin-right: -50px;
+      opacity: 0;
+
+      @media (min-width: 768px) {
+         position: absolute;
+         top: 0;
+         right: 0;
+         margin: 0;
+      }
+
+      &-mask {
+         position: absolute;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         border-radius: 50%;
+         box-shadow: inset 0 0 0 150px $brand-yellow;
+      }
+
+      img {
+         border: 1px solid $brand-yellow;
+      }
+   }
+
+   .person {
+      color: $brand-red;
+      text-align: right;
+
+      cite {
+         font-style: normal;
+      }
+
+      @media (min-width: 768px) {
+         font-size: 18px;
+         // margin-top: -30px;
+      }
+   }
+}
+
+.quote-author {
+   // position: relative;
+   // line-height: 0;
+}
+
+.blue.quote {
+   @media (min-width: 768px) {
+      .bgImg {
+         background: url(../img/quotes/quotes_blue_bg.jpg) no-repeat 50% 0;
+         background-size: cover;
+         height: 100vh;
+         width: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
+      }
+   }
+   blockquote {
+      @media (min-width: 768px) {
+         width: 70%;
+         max-width: inherit;
+         padding-left: 50px;
+         margin: 0;
+      }
+      h2.h1 {
+         color:$brand-white;
+         // transform: translateX(40px);
+      }
+      h2.h1:before { color: $brand-yellow; }
+      footer { color: $brand-yellow; }
+   }
+}
+
+#section5 .bgImg,
+#section5 .container-fluid {
+   opacity: 0;
+}

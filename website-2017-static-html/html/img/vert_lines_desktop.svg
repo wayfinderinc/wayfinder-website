@@ -1,0 +1,51 @@
+
+<svg version="1.1" id="grid" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1404 905">
+   <g id="left_gfx">
+      <rect id="left_gfx_bot" y="772" class="st0" width="8" height="36"/>
+      <rect id="left_gfx_mid" y="394" class="st0" width="8" height="36"/>
+      <rect id="left_gfx_top" y="18" class="st0" width="8" height="36"/>
+      <rect id="right_gfx_01" x="1396" class="st0" width="8" height="128"/>
+   </g>
+   <g id="right_gfx">
+      <rect id="right_gfx_02" x="1396" y="138" class="st0" width="8" height="128"/>
+      <rect id="right_gfx_03" x="1396" y="276" class="st0" width="8" height="128"/>
+      <rect id="right_gfx_04" x="1396" y="414" class="st0" width="8" height="128"/>
+      <rect id="right_gfx_05" x="1396" y="552" class="st0" width="8" height="128"/>
+      <rect id="right_gfx_06" x="1396" y="690" class="st0" width="8" height="128"/>
+   </g>
+   <g id="group_05">
+      <rect id="vert_05_tick_04" x="1365" y="618" class="st0" width="10" height="1"/>
+      <rect id="vert_05_tick_03" x="1365" y="412" class="st0" width="10" height="1"/>
+      <rect id="vert_05_tick_02" x="1365" y="207" class="st0" width="10" height="1"/>
+      <rect id="vert_05_tick_01" x="1365" y="1" class="st0" width="10" height="1"/>
+      <rect id="vert_05" x="1375" y="1" class="st0" width="1" height="904"/>
+   </g>
+   <g id="group_04">
+      <rect id="vert_04_tick_04" x="1028" y="618" class="st0" width="10" height="1"/>
+      <rect id="vert_04_tick_03" x="1028" y="412" class="st0" width="10" height="1"/>
+      <rect id="vert_04_tick_02" x="1028" y="207" class="st0" width="10" height="1"/>
+      <rect id="vert_04_tick_01" x="1028" y="1" class="st0" width="10" height="1"/>
+      <rect id="vert_04" x="1038" y="1" class="st0" width="1" height="904"/>
+   </g>
+   <g id="group_03">
+      <rect id="vert_03_tick_04" x="696" y="618" class="st0" width="10" height="1"/>
+      <rect id="vert_03_tick_03" x="696" y="412" class="st0" width="10" height="1"/>
+      <rect id="vert_03_tick_02" x="696" y="207" class="st0" width="10" height="1"/>
+      <rect id="vert_03_tick_01" x="696" y="1" class="st0" width="10" height="1"/>
+      <rect id="vert_03" x="701" y="1" class="st0" width="1" height="904"/>
+   </g>
+   <g id="group_02">
+      <rect id="vert_02_tick_04" x="363" y="618" class="st0" width="10" height="1"/>
+      <rect id="vert_02_tick_03" x="363" y="412" class="st0" width="10" height="1"/>
+      <rect id="vert_02_tick_02" x="363" y="207" class="st0" width="10" height="1"/>
+      <rect id="vert_02_tick_01" x="363" y="1" class="st0" width="10" height="1"/>
+      <rect id="vert_02" x="363" y="1" class="st0" width="1" height="904"/>
+   </g>
+   <g id="group_01">
+      <rect id="vert_01_tick_04" x="25" y="618" class="st0" width="10" height="1"/>
+      <rect id="vert_01_tick_03" x="25" y="412" class="st0" width="10" height="1"/>
+      <rect id="vert_01_tick_02" x="25" y="207" class="st0" width="10" height="1"/>
+      <rect id="vert_01_tick_01" x="25" y="1" class="st0" width="10" height="1"/>
+      <rect id="vert_01" x="25" y="1" class="st0" width="1" height="904"/>
+   </g>
+</svg>

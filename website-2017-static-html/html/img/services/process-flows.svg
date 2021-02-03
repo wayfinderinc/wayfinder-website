@@ -1,0 +1,77 @@
+<svg id="Process_Flows" data-name="Process Flows" xmlns="http://www.w3.org/2000/svg" width="197.844" height="118.281" viewBox="0 0 197.844 118.281">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 15px;
+      }
+
+      .cls-1, .cls-4 {
+        stroke: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-4, .cls-5 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-5 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-4, .cls-5 {
+        fill: #fd6161;
+        stroke-width: 6px;
+      }
+
+      .cls-2 {
+        stroke: #fd6161;
+        opacity: 0.6;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        stroke: #ffea00;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M91.082,29.346H11.316" transform="translate(-0.188 -0.75)"/>
+  <path class="cls-1" d="M115.5,29.5h67" transform="translate(-0.188 -0.75)"/>
+  <path class="cls-1" d="M99.49,31.487V66.695c0,38.347,32.544,36.991,32.544,36.991h48" transform="translate(-0.188 -0.75)"/>
+  <path class="cls-2" d="M73.732,35.5L99.5,9.732,125.268,35.5,99.5,61.268Z" transform="translate(-0.188 -0.75)"/>
+  <path class="cls-3" d="M179.033,89.511a4.953,4.953,0,0,1,7.007,0l10.51,10.514a4.958,4.958,0,0,1,0,7.01l-10.51,10.514a4.953,4.953,0,0,1-7.007,0V89.511Z" transform="translate(-0.188 -0.75)"/>
+  <path class="cls-3" d="M179.033,15.511a4.953,4.953,0,0,1,7.007,0l10.51,10.514a4.958,4.958,0,0,1,0,7.01L186.04,43.549a4.953,4.953,0,0,1-7.007,0V15.511Z" transform="translate(-0.188 -0.75)"/>
+  <circle class="cls-4" cx="15" cy="28.438" r="12"/>
+  <path class="cls-5" d="M73.732,29.5L99.5,3.732,125.268,29.5,99.5,55.268Z" transform="translate(-0.188 -0.75)"/>
+</svg>

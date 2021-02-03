@@ -1,0 +1,51 @@
+
+
+// ==========
+.grid {
+    @media (min-width: 400px) and (max-width: 767px) {
+        max-width: 325px;
+        margin: 0 auto;
+    }
+    @media (min-width: 768px) {
+        margin: 0;
+        max-width: inherit;
+    }
+}
+
+.grid-item {
+   opacity: 0;
+   // transform: translateY(50px);
+   padding-left: 0;
+   margin-bottom: 15px;
+    @extend .col-sm-3;
+
+    &--expand2 {
+      @media (min-width: 768px) {
+          width: 50%!important;
+      }
+   }
+
+    &--expand { width: 100%; }
+}
+
+.grid-item > div {
+    background-color: #fff;
+    padding-bottom: 5px;
+
+    h2, h3, p { padding: 0 10px; }
+
+    img { width: 800px; }
+}
+
+.grid-sizer {
+   @extend .col-sm-3;
+}
+// ==========
+
+// .test {
+//    position: absolute;
+//    z-index: 999999999;
+//    background: red;
+//    height: 100%;
+//    width: 100%;
+// }

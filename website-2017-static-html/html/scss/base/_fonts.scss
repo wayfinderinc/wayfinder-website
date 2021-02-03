@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:700,900');
+
+body {
+   font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+   font-family: 'Yantramanav', sans-serif !important;
+   font-weight: 700;
+}
+
+.bold900{
+   font-weight: 900;
+}
+
+//
+// /// Regular font family
+// /// @type List
+// $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+//
+// /// Code (monospace) font family
+// /// @type List
+// $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;

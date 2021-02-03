@@ -1,0 +1,10 @@
+<svg version="1.1" id="gfx_left" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 27 905">
+	<g id="left_gfx">
+		<rect id="left_gfx_bot" y="772" width="8" height="36"/>
+		<rect id="left_gfx_mid" y="394" width="8" height="36"/>
+		<rect id="left_gfx_top" y="18" width="8" height="36"/>
+	</g>
+	<g id="group_01">
+		<rect id="vert_01" x="25" y="1" fill="none" width="1" height="904"/>
+	</g>
+</svg>

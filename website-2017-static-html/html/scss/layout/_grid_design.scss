@@ -1,0 +1,69 @@
+.grid-wrap {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 98%;
+    height: 100%;
+   //  max-width: 1600px;
+    pointer-events: none;
+   //  opacity: 0;
+
+}
+
+.gridDesign {
+   height: 100%;
+   position: absolute;
+   top: 0;
+   // opacity: 0.15;
+}
+
+//  graphic elments on left of gridDesign
+#gfx_left { left: 0; }
+// scroll elements on right of gridDesign
+#gfx_right { right: 0; }
+//
+#vert_group_01 { left: 0; }
+#vert_group_02 {
+   visibility: hidden;
+   left: 25%;
+   @media (min-width: 768px) {
+      visibility: visible;
+      // opacity: 0.15;
+   }
+}
+#vert_group_03 { left: 50%; transform: translateX(-50%); } // center grid line
+#vert_group_04 {
+   visibility: hidden;
+   left: 75%;
+   @media (min-width: 768px) {
+      visibility: visible;
+      // opacity: 0.15;
+   }
+}
+#vert_group_05 { right: 0; }
+
+//
+// .vertSticks {
+//    opacity: 0;
+// }
+
+
+#gfx_left,
+#vert_group_01,
+#vert_group_02,
+#vert_group_03,
+#vert_group_04,
+#vert_group_05 {
+   pointer-events: none;
+}
+
+#right_gfx_01,
+#right_gfx_02,
+#right_gfx_03,
+#right_gfx_04,
+#right_gfx_05,
+#right_gfx_06 {
+   cursor: pointer;
+   pointer-events: all;
+}
