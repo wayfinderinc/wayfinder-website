@@ -17,7 +17,7 @@ body {
   color: #444;
   font-size: 18px;
   background-color: #fff;
-  margin: 0px;
+  margin: 0;
   overflow-x: hidden;
 }
 
@@ -4408,7 +4408,7 @@ section {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0px;
+  top: 0;
   background: #2d2d6f;
 }
 
@@ -4425,7 +4425,7 @@ section {
 
 .work-wrapper .casestudies .client-info {
   position: absolute;
-  top: 0px;
+  top: 0;
   font-weight: 700;
   padding: 20px 0 0 16px;
   -webkit-transition: .25s all ease-out;
@@ -4456,7 +4456,7 @@ section {
 
 .work-wrapper .casestudies .client-info h4 {
   font-family: "Replica-Bold", sans-serif;
-  padding: 0 0 0px 0;
+  padding: 0 0 0 0;
   font-size: 18px;
   line-height: 1;
   color: #fff;
@@ -4530,7 +4530,7 @@ section {
 
 @media (min-width: 1366px) {
   .work-wrapper .casestudies .ul-verify-img {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -4856,7 +4856,7 @@ section {
   .path-contact .contact-box {
     max-width: 620px;
     margin-top: 104px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -4876,11 +4876,33 @@ section {
   }
 }
 
-.path-contact .contact-box .c-contact .tt {
+.path-contact .contact-box .c-contact #mc_embed_signup h2.tt {
   width: 100%;
   color: #ef4f53;
   padding-bottom: 20px;
+  font-family: "Replica-Bold", sans-serif;
+  font-size: 28px;
+  margin: 0;
 }
+
+@media (min-width: 768px) {
+  .path-contact .contact-box .c-contact #mc_embed_signup h2.tt {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .path-contact .contact-box .c-contact #mc_embed_signup h2.tt {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .path-contact .contact-box .c-contact #mc_embed_signup h2.tt {
+    font-size: 56px;
+  }
+}
+
 
 .path-contact .contact-box .c-contact .info {
   font-weight: 700;
@@ -4906,9 +4928,13 @@ section {
   position: relative;
 }
 
-.path-contact .contact-box .c-contact .label {
+.path-contact .contact-box .c-contact .label,
+.path-contact .contact-box .c-contact label {
   font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
   padding: 24px 0 8px;
+  display: block;
 }
 
 .path-contact .contact-box .c-contact .form-control {
@@ -4978,8 +5004,20 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  list-style: none;
+  position: relative;
+  padding: 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.path-contact .contact-box .c-contact .toggle-buttons label {
+  padding: 0;
+  cursor: pointer;
+}
+.path-contact .contact-box .c-contact .toggle-buttons input {
+  position: absolute;
+  height: 0;
 }
 
 .path-contact .contact-box .c-contact .toggle-buttons .btn-toggle {
@@ -5010,7 +5048,7 @@ section {
 
 @media (min-width: 768px) {
   .path-contact .contact-box .c-contact .toggle-buttons .lg-mb-0 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -5138,3 +5176,7 @@ section {
   background-size: contain;
 }
 /*# sourceMappingURL=style.css.map */
+
+#mc_embed_signup label.error {
+  display: none!important;
+}
