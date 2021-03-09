@@ -1,0 +1,28 @@
+// .wf-grid { position: fixed; width: 100vw; height: 100%; top:0px; opacity: 0.06; display: block;
+  .grid-line { position: fixed; background: #000; width: 1px; height: 100%; top: 0px; opacity: .06; }
+  .wf-grid-left-out { display: none;
+    @include respond-to(tablet-w) { }
+    @include respond-to(desktop-w-s) { display: block; left: 50%; margin-left: -620px; }
+    @include respond-to(desktop-w-normal) { margin-left: -700px; }
+    @include respond-to(desktop-w-xl) { margin-left: -940px; }
+  }
+  .wf-grid-left-mid { left: 0px; margin-left: 10px;
+    @include respond-to(tablet-w) { left: 0px; margin-left: 15px; }
+    @include respond-to(desktop-w-s) { left: 50%; margin-left: -304px; }
+    @include respond-to(desktop-w-normal) { margin-left: -344px; }
+    @include respond-to(desktop-w-xl) { margin-left: -464px; }
+  }
+  .wf-grid-center { left: 50%; margin-left: -.5px; }
+  .wf-grid-right-mid { right: 0px; margin-right: 10px;
+    @include respond-to(tablet-w) { right: 0px; margin-right: 15px; }
+    @include respond-to(desktop-w-s) { right: 50%; margin-right: -304px; }
+    @include respond-to(desktop-w-normal) { margin-right: -344px; }
+    @include respond-to(desktop-w-xl) { margin-right: -464px; }
+  }
+  .wf-grid-right-out { display: none;
+    @include respond-to(tablet-w) { }
+    @include respond-to(desktop-w-s) { display: block; right: 50%; margin-right: -620px; }
+    @include respond-to(desktop-w-normal) { margin-right: -700px; }
+    @include respond-to(desktop-w-xl) { margin-right: -940px; }
+  }
+// }
