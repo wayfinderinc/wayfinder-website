@@ -1,22 +1,39 @@
-.hero { display: flex; justify-content: center; align-items: center; position: relative; width: 100%; height: 94vh; overflow: hidden;
-    @include respond-to(tablet) { height: 100vh; }
+.hero { display: flex; justify-content: center; align-items: center; position: relative; width: 100%; height: auto; overflow: hidden; background: #FF5252; padding-bottom: 112px;
+    @include respond-to(desktop-1024) { height: 100vh; padding-bottom: 0; }
     .content { padding: 48px 20px; margin-top: 0; 
-        @include respond-to(tablet) { padding: 56px; }
-        h1 { font-size: 72px; margin-left: -4px;
-            @include respond-to(tablet) { font-size: 72px; }
-            @include respond-to(desktop-1280) { font-size: 96px; margin-left: -6px; }
-            @include respond-to(desktop-1366) { font-size: 120px; margin-left: -8px; }
+        @include respond-to(tablet) { padding: 56px 56px 32px; }
+        @include respond-to(desktop-1024) { padding: 56px; }
+        // BELOW IS THE ORIGINAL HERO H1 AND P STYLES FOR WHEN THE AWARDS IS REMOVED
+        // h1 { font-size: 72px; margin-left: -4px;
+        //     @include respond-to(tablet) { font-size: 72px; }
+        //     @include respond-to(desktop-1280) { font-size: 96px; margin-left: -6px; }
+        //     @include respond-to(desktop-1366) { font-size: 120px; margin-left: -8px; }
+        // }
+        // p { font-size: 21px; line-height: 1.5; padding: 8px 0 24px; color: #fff; 
+        //     @include respond-to(mobile) { padding: 8px 20px 24px 0; }
+        //     @include respond-to(tablet) { max-width: 440px; padding: 8px 0 24px; }
+        //     @include respond-to(desktop-1024) { max-width: 440px; }
+        //     @include respond-to(desktop-1366) { font-size: 24px; padding: 0 0 24px; }
+        // }
+        // BELOW IS THE NEW ONE TO REMOVE AFTER AWARDS IS COMPLETE
+        h1 { font-size: 40px; line-height: 48px; margin-left: 0; padding-top: 330px;
+            @include respond-to(tablet) { font-size: 56px; line-height: 60px; margin-left: -4px; padding-top: 544px; max-width: 564px; }
+            @include respond-to(desktop-1024) { padding-top: 0; }
+            @include respond-to(desktop-1280) { font-size: 68px; line-height: 72px; margin-left: -4px; } 
         }
         p { font-size: 21px; line-height: 1.5; padding: 8px 0 24px; color: #fff; 
             @include respond-to(mobile) { padding: 8px 20px 24px 0; }
-            @include respond-to(tablet) { max-width: 440px; padding: 8px 0 24px; }
-            @include respond-to(desktop-1024) { max-width: 440px; }
-            @include respond-to(desktop-1366) { font-size: 24px; padding: 0 0 24px; }
+            @include respond-to(tablet) { padding: 8px 0 24px; }
+            @include respond-to(desktop-1024) { padding: 24px 0 24px; max-width: 414px; }
+            @include respond-to(desktop-1280) { max-width: 512px; }
+            @include respond-to(desktop-1366) { padding: 20px 0 24px; }
         }
         .form-email { display: flex;
             input[type=text] { width: 144px; height: 44px; margin: 0; padding: 12px; box-sizing: border-box; font-size: 12px; font-weight: 400; color: $body-copy-color; border: 0; border-radius: 4px; 
                 @include respond-to(mobile) { width: 200px; font-size: 14px; padding: 16px; }
                 @include respond-to(tablet) { width: 264px; font-size: 18px; }
+                @include respond-to(desktop-1024) { width: 204px; }
+                @include respond-to(desktop-1280) { width: 264px; }
                 &:focus { outline: none; }
             }
             button { display: flex; align-items: center; height: 44px; background: #FFEA01; font-family: "Replica-Bold", sans-serif; font-size: 12px; color: #444; border-radius: 22px; margin-left: 12px; padding: 0 12px; transition: .25s background ease-out; cursor: pointer;
@@ -36,4 +53,23 @@
         &:hover { background: rgba(#fff,1); }
         &:hover .arrow-dark { opacity: 1; }
     }
+    .awards-wrapper { position: absolute; width: 504px; height: 310px; background: url(../creative/images/hero-awards/awards-bg.png) no-repeat; background-size: cover; margin-top: -376px; margin-left: 40px;
+        @include respond-to(tablet) { width: 830px; height: 510px; left: 50%; transform: translateX(-50%); margin-top: -252px; margin-left: 0; }
+        @include respond-to(desktop-1024) { transform: translateX(-14%); margin-top: -40px; }
+        @include respond-to(desktop-1280) { transform: translateX(0%); }
+        .awards-macbook { position: absolute; width: 240px; height: 152px; background: url(../creative/images/hero-awards/macbook.png) no-repeat; background-size: cover; top: 140px; left: 82px;
+            @include respond-to(tablet) { width: 396px; height: 249px; top: 232px; left: 146px; }
+            .awards-screen { position: absolute; width: 208px; height: 132px; top: 7px; left: 17px; overflow: hidden;
+                @include respond-to(tablet) { width: 340px; height: 214px; top: 10px; left: 28px; }
+                .client-img { position: absolute; width: 100%; height: 100%; top: 0;
+                    img { width: 100%; height: auto; }
+                }
+            }
+            .awards-copy { width: 100%; display: flex; align-items: flex-start; position: absolute; font-size: 18px; line-height: 1.3; font-weight: 700; color: #fff; margin-top: 268px; padding: 0 12px 0 0; display: none;
+                @include respond-to(desktop-1024) { display: flex; }
+                &:before { position: relative; content: url(../creative/images/hero-awards/badge.svg); width: 22px; height: 22px; padding-right: 4px; }
+            }
+        }
+    } 
+    #awardConfetti { position: absolute; width: 100%; height: 100%; overflow: hidden; pointer-events: 'none'; }
 }

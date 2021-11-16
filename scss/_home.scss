@@ -53,10 +53,10 @@
     }
 }
 
-.our-work { position: relative; background: url(../creative/images/our-work-bg.jpg) no-repeat; background-size: cover; padding: 40px 0 80px;
+.our-work { position: relative; background: url(../creative/images/our-work-bg.jpg) no-repeat; background-size: cover; padding: 40px 0 80px; margin-top: 0;
     @include respond-to(desktop-1024) { padding: 56px 0 96px; }
     @include respond-to(desktop-1280) { padding: 72px 0 96px; }
-    @include respond-to(desktop-1366) { padding: 144px 0; }
+    @include respond-to(desktop-1366) { padding: 104px 0 144px; }
 }
 
 .explore-work { position: relative; display: flex; flex-direction: column-reverse; justify-content: space-between; align-items: center;
