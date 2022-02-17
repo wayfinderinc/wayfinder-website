@@ -495,17 +495,17 @@ header .mobile-nav .nav-menu .primary-navigation ul li a:hover {
   position: fixed;
   width: 144px;
   height: 16px;
-  bottom: 12px;
+  bottom: 13px;
   right: 40px;
-  background: url(../creative/social/copyright.svg) no-repeat;
-  background-size: cover;
   z-index: 99999;
 }
 
 @media (min-width: 768px) {
   .copyright {
+    font-size: 14.5px;
     display: block;
-    right: 32px;
+    right: 31px;
+    opacity: .7;
   }
 }
 
@@ -687,13 +687,13 @@ footer .social-icons .dribbble {
 footer .copyright {
   display: block;
   position: absolute;
+  font-size: 12.5px;
   width: 126px;
   height: 14px;
-  bottom: 10px;
+  bottom: 11px;
   right: 18px;
-  background: url(../creative/social/copyright.svg) no-repeat;
-  background-size: cover;
   z-index: 99999;
+  opacity: .7;
 }
 
 @media (min-width: 768px) {
@@ -5296,8 +5296,29 @@ section {
 }
 
 .path-contact .copyright {
-  background: url(../creative/social/copyright-white.svg) no-repeat;
-  background-size: contain;
+  display: none;
+  position: fixed;
+  width: 144px;
+  height: 16px;
+  bottom: 13px;
+  right: 40px;
+  z-index: 99999;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .path-contact .copyright {
+    font-size: 14.5px;
+    display: block;
+    right: 31px;
+    opacity: .7;
+  }
+}
+
+@media (min-width: 1024px) {
+  .path-contact .copyright {
+    right: 40px;
+  }
 }
 
 .path-contact .contact-box #mc_embed_signup_scroll {

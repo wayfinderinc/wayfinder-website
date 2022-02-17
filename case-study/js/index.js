@@ -1,5 +1,10 @@
 var d = document;
 
+const date = new Date();
+const year = date.getFullYear(); // 2022
+
+document.getElementById("WFyear").innerHTML = year;
+
 if ( window.innerWidth <= 414 ) {
   // Draggable.create('.img-graph', { type:'x', bounds:'.graph' });
   // TweenLite.set('.copyrite', { rotation:90, transformOrigin:'bottom right', x:-10.5, y:-5 });

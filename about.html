@@ -538,7 +538,7 @@
       <div class="icon dribbble"></div>
     </div>
 
-    <div class="copyright"></div>
+    <div class="copyright">&#169; Wayfinder LLC <span id="WFyear"></span></div>
     
   </main>
 
@@ -554,7 +554,7 @@
       <div class="icon instagram"></div>
       <div class="icon dribbble"></div>
     </div>
-    <div class="copyright"></div>
+    <div class="copyright">&#169; Wayfinder LLC <span id="WFyear2"></span></div>
   </footer>
 
 <script type="text/javascript" src="vendor/gsap/gsap.min.js"></script>
@@ -566,6 +566,12 @@
 <script type="text/javascript" src="js/script.js"></script>
 
 <script type="text/javascript">
+
+  const date = new Date();
+  const year = date.getFullYear(); // 2022
+
+  document.getElementById("WFyear").innerHTML = year;
+  document.getElementById("WFyear2").innerHTML = year;
 
   var windowWidth = window.innerWidth,
     headerStatus = 'inhero';

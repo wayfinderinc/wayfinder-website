@@ -315,7 +315,7 @@
         <div class="icon dribbble"></div>
     </div>
 
-    <div class="copyright"></div>
+    <div class="copyright">&#169; Wayfinder LLC <span id="WFyear"></span></div>
 
 </main>
 
@@ -326,6 +326,11 @@
 <script src='https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js'></script>
 
 <script type="text/javascript">
+
+    const date = new Date();
+    const year = date.getFullYear(); // 2022
+
+    document.getElementById("WFyear").innerHTML = year;
 
     const windowWidth = window.innerWidth,
         headerStatus = 'inhero';

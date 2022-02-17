@@ -181,7 +181,10 @@
         .instagram { background: url(../creative/social/instagram-white.svg) no-repeat; background-size: cover; width: 11px; height: 11px; }
         .dribbble { background: url(../creative/social/dribbble-white.svg) no-repeat; background-size: contain; width: 12px; height: 12px; }
     }
-    .copyright { background: url(../creative/social/copyright-white.svg) no-repeat; background-size: contain; }
+    .copyright { display: none; position: fixed; width: 144px; height: 16px; bottom: 13px; right: 40px; z-index: 99999; color: #fff;
+      @include respond-to(tablet) { font-size: 14.5px; display: block; right: 31px; opacity: .7; }
+      @include respond-to(desktop-1024) { right: 40px; }
+    }
     .contact-box {
       #mc_embed_signup_scroll { padding-top: 16px;
         .form-group {

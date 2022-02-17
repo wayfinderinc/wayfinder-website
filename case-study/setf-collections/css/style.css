@@ -376,12 +376,15 @@ ul li::before {
   position: fixed;
   bottom: 0px;
   right: 0px;
-  width: 92px;
+  /* width: 92px; */
+  font-size: 11.5px;
+  opacity: .7;
   height: 10px;
-  background: url(../img/social/copyright.svg) no-repeat;
+  /* background: url(../img/social/copyright.svg) no-repeat; */
   background-size: contain; }
   @media (min-width: 768px) {
     .copyrite {
+      font-size: 14.5px;
       transform: none;
       width: 144px;
       height: 16px;
